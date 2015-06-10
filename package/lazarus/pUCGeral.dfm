@@ -16,7 +16,7 @@ object FormUserPerf: TFormUserPerf
   OnKeyPress = FormKeyPress
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.3'
+  LCLVersion = '1.4.0.4'
   object Panel1: TPanel
     Left = 0
     Height = 41
@@ -519,7 +519,7 @@ object FormUserPerf: TFormUserPerf
       OnMouseLeave = SpeedUserMouseLeave
     end
   end
-  object Panel3: TPanel
+  object PanelFrames: TPanel
     Left = 100
     Height = 504
     Top = 41

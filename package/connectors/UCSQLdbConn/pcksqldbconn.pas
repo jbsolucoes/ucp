@@ -2,20 +2,20 @@
   This source is only used to compile and install the package.
  }
 
-unit pckUserControlDesign;
+unit pckSQLdbConn;
 
 interface
 
 uses
-  UCEditorForm_U, UCIdle, UCObjSel_U, UCReg, ucaboutucpfrm, LazarusPackageIntf;
+  UCSQLdbConn, ucsqldbconnreg, LazarusPackageIntf;
 
 implementation
 
 procedure Register;
 begin
-  RegisterUnit('UCReg', @UCReg.Register);
+  RegisterUnit('ucsqldbconnreg', @ucsqldbconnreg.Register);
 end;
 
 initialization
-  RegisterPackage('pckUserControlDesign', @Register);
+  RegisterPackage('pckSQLdbConn', @Register);
 end.

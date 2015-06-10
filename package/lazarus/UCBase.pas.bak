@@ -469,12 +469,7 @@ type
     procedure DeleteLoginMonitor(UCAppMessage: TUCApplicationMessage);
     procedure NotificationLoginMonitor;
     procedure ShowNewConfig;
-
-
   public
-    property UsersLogged: TUCUsersLogged read FUsersLogged write FUsersLogged;
-    property TableUsersLogged: TUCTableUsersLogged read FTableUsersLogged write FTableUsersLogged;
-
     procedure Logoff;
     procedure Execute;
     procedure StartLogin;
@@ -514,7 +509,7 @@ type
     property UserProfile: TUCUserProfile read FUserProfile write FUserProfile;
     property UserPasswordChange: TUCUserPasswordChange read FUserPasswordChange
       write FUserPasswordChange;
-
+    property UsersLogged: TUCUsersLogged read FUsersLogged write FUsersLogged;
     property UsersLogoff: TUCUserLogoff read FUsersLogoff write FUsersLogoff;
     property LogControl: TUCLogControl read FLogControl write FLogControl;
     {$IFNDEF FPC}
@@ -532,7 +527,8 @@ type
     // Tabelas
     property TableUsers: TUCTableUsers read FTableUsers write FTableUsers;
     property TableRights: TUCTableRights read FTableRights write FTableRights;
-
+    property TableUsersLogged: TUCTableUsersLogged read FTableUsersLogged
+      write FTableUsersLogged;
 
     property DataConnector: TUCDataConnector read FDataConnector
       write SetDataConnector;
@@ -860,7 +856,7 @@ begin
     FLogControl.Active := True;
     FUser.UsePrivilegedField := False;
     FUser.ProtectAdministrator := True;
-    FUsersLogged.Active := false;
+    FUsersLogged.Active := True;
     NotAllowedItems.MenuVisible := True;
     NotAllowedItems.ActionVisible := True;
   end
@@ -2215,7 +2211,7 @@ end;
 procedure TUserControl.TestaFecha(Sender: TObject; var CanClose: Boolean);
 begin
   // if FFormLogin.ModalResult = mrOk then
-  CanClose := true; //(CurrentUser.UserID > 0);
+  CanClose := (CurrentUser.UserID > 0);
 end;
 
 procedure TUserControl.ApplyRights;

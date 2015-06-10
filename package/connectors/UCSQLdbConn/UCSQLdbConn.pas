@@ -1,13 +1,13 @@
 {-----------------------------------------------------------------------------
- Unit Name: UCZEOSConn
+ Unit Name: UCSQLdbConn
  Author:    QmD
  Date:      08-nov-2004
- Purpose:   ZEOS 6 Support
+ Purpose:   SQLdb Support
 
- registered in UCZEOSReg.pas
+ registered in UCSQLdbReg.pas
 -----------------------------------------------------------------------------}
 
-unit UCZEOSConn;
+unit ucsqldbconn;
 
 {$IFDEF FPC}
   {$MODE Delphi}
@@ -21,14 +21,15 @@ uses
   Classes,
   DB,
   SysUtils,
+  LResources,
   UCDataConnector,
-  ZConnection;
+  sqldb;
 
 type
-  TUCZEOSConn = class(TUCDataConnector)
+  TUCSQLdbConn = class(TUCDataConnector)
   private
-    FConnection: TZConnection;
-    procedure SetFConnection(const Value: TZConnection);
+    FConnection: TSQLConnection;
+    procedure SetFConnection(const Value: TSQLConnection);
   protected
     procedure Notification(AComponent: TComponent; Operation: TOperation); override;
   public
@@ -39,22 +40,16 @@ type
     function UCGetSQLDataset(FSQL: String): TDataset; override;
     procedure UCExecSQL(FSQL: String); override;
   published
-    property Connection: TZConnection read FConnection write SetFConnection;
+    property Connection: TSQLConnection read FConnection write SetFConnection;
   end;
-
-{$IFnDEF FPC}
-uses
-  ZDataset;
-{$ELSE}
-{$ENDIF}
 
 implementation
 
-uses ZDataset, Dialogs;
+uses Dialogs;
 
-{ TUCZEOSConn }
+{ TUCSQLdbConn }
 
-procedure TUCZEOSConn.SetFConnection(const Value: TZConnection);
+procedure TUCSQLdbConn.SetFConnection(const Value: TSQLConnection);
 begin
   if FConnection <> Value then
     FConnection := Value;
@@ -62,14 +57,14 @@ begin
     FConnection.FreeNotification(Self);
 end;
 
-procedure TUCZEOSConn.Notification(AComponent: TComponent; Operation: TOperation);
+procedure TUCSQLdbConn.Notification(AComponent: TComponent; Operation: TOperation);
 begin
   if (Operation = opRemove) and (AComponent = FConnection) then
     FConnection := nil;
   inherited Notification(AComponent, Operation);
 end;
 
-function TUCZEOSConn.UCFindTable(const TableName: String): Boolean;
+function TUCSQLdbConn.UCFindTable(const TableName: String): Boolean;
 var
   TempList: TStringList;
 begin
@@ -78,7 +73,7 @@ begin
 
   try
     TempList := TStringList.Create;
-    FConnection.GetTableNames('', TempList);
+    FConnection.GetTableNames(TempList);
     TempList.Text := UpperCase(TempList.Text);
     Result        := TempList.IndexOf(UpperCase(TableName)) > -1;
   Except
@@ -87,12 +82,12 @@ begin
   FreeAndNil(TempList);  
 end;
 
-function TUCZEOSConn.UCFindDataConnection: Boolean;
+function TUCSQLdbConn.UCFindDataConnection: Boolean;
 begin
   Result := Assigned(FConnection) and (FConnection.Connected);
 end;
 
-function TUCZEOSConn.GetDBObjectName: String;
+function TUCSQLdbConn.GetDBObjectName: String;
 begin
   if Assigned(FConnection) then
   begin
@@ -107,34 +102,53 @@ begin
     Result := '';
 end;
 
-function TUCZEOSConn.GetTransObjectName: String;
+function TUCSQLdbConn.GetTransObjectName: String;
 begin
   Result := '';
 end;
 
-procedure TUCZEOSConn.UCExecSQL(FSQL: String);
+procedure TUCSQLdbConn.UCExecSQL(FSQL: String);
 begin
-  with TZQuery.Create(nil) do
+  if not assigned(FConnection) then
+    exit;
+
+  with TSQLQuery.Create(nil) do
   begin
-    Connection := FConnection;
-    SQL.Text   := FSQL;
-    try ExecSQL; except end;
-    If FConnection.AutoCommit = False then
-      FConnection.Commit;
-    Free;
+    try
+      Connection := FConnection;
+      DataBase   := FConnection;
+      SQL.Text   := FSQL;
+
+      try ExecSQL;
+      except on e:exception do
+        begin
+          FConnection.Transaction.Rollback;
+
+          raise exception.create(format('ExecSQL error: %s',[e.message]));
+        end;
+      end;
+
+      FConnection.Transaction.Commit;
+    finally
+      Free;
+    end;
   end;
 end;
 
-function TUCZEOSConn.UCGetSQLDataset(FSQL: String): TDataset;
+function TUCSQLdbConn.UCGetSQLDataset(FSQL: String): TDataset;
 begin
-  Result := TZQuery.Create(nil);
-  with Result as TZQuery do
+  Result := TSQLQuery.Create(nil);
+  with Result as TSQLQuery do
   begin
     Connection := FConnection;
+    DataBase   := FConnection;
     SQL.Text   := FSQL;
     Open;
   end;
 end;
+
+initialization
+  {$I ucsqldbconn.lrs}
 
 end.
 

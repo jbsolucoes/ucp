@@ -6,16 +6,16 @@ unit UcConsts_Language;
 
 interface
 
-Uses SysUtils;
+uses SysUtils;
 
-Type
+type
   TUCLanguage = (ucPortuguesBr, ucEnglish, ucSpanish, ucFrench);
 
-Const
+const
   MaxArray = 227;
 
-Const
-  UC_PTBR: Array [0 .. MaxArray, 0 .. 1] of string = (('Const_Contr_TitleLabel',
+const
+  UC_PTBR: array [0 .. MaxArray, 0 .. 1] of string = (('Const_Contr_TitleLabel',
     'Seleção de Componentes do Form. :'), ('Const_Contr_GroupLabel', 'Grupo :'),
     ('Const_Contr_CompDispLabel', 'Componentes Disponíveis :'),
     ('Const_Contr_CompSelLabel', 'Componentes Selecionados :'),
@@ -66,11 +66,11 @@ Const
     'Informe um usuário e senha válidos.'), ('Const_Men_SenhaDesabitada',
     'Retirada senha do Login %s'), ('Const_Men_SenhaAlterada',
     'Senha alterada com sucesso!'), ('Const_Men_MsgInicial',
-    'ATENÇÃO Login Inicial:' + #13 + #10 + #13 + #10 + 'Usuário : :user' + #13 +
-    #10 + 'Senha : :password' + #13 + #10 + #13 + #10 +
+    'ATENÇÃO Login Inicial:' + #13 + #10 + #13 + #10 + 'Usuário : :user' +
+    #13 + #10 + 'Senha : :password' + #13 + #10 + #13 + #10 +
     'Defina as permissões para este usuário.'), ('Const_Men_MaxTentativas',
-    '%d Tentativas de login inválido. Por motivos de segurança o ' + #13 + #10 +
-    'sistema será fechado.'), ('Const_Men_LoginInvalido',
+    '%d Tentativas de login inválido. Por motivos de segurança o ' +
+    #13 + #10 + 'sistema será fechado.'), ('Const_Men_LoginInvalido',
     'Usuário ou Senha inválidos!'), ('Const_Men_UsuarioExiste',
     'O Usuário "%s" já está cadastrado no sistema !!'),
     ('Const_Men_PasswordExpired', 'Atenção, sua senha expirou, favor troca-la'),
@@ -202,10 +202,10 @@ Const
     ('Const_Inc_LabelStatus', 'Status'), ('Const_Inc_StatusActive', 'Ativo'),
     ('Const_Inc_StatusDisabled', 'Inativo'));
 
-  { ------------------------------------------------------------------------------ }
+{ ------------------------------------------------------------------------------ }
 
-Const
-  UC_ENGLISH: Array [0 .. MaxArray, 0 .. 1] of string =
+const
+  UC_ENGLISH: array [0 .. MaxArray, 0 .. 1] of string =
     (('Const_Contr_TitleLabel', 'Team of Components of the Form. :'),
     ('Const_Contr_GroupLabel', 'Group:'), ('Const_Contr_CompDispLabel',
     'Available components:'), ('Const_Contr_CompSelLabel',
@@ -257,8 +257,8 @@ Const
     'Inform a valid user and password.'), ('Const_Men_SenhaDesabitada',
     'Retired password of the Login %s'), ('Const_Men_SenhaAlterada',
     'Password altered with success!'), ('Const_Men_MsgInicial',
-    'ATTENTION, Inicial Login :' + #13 + #10 + #13 + #10 + 'User: :user' + #13 +
-    #10 + 'Password : :password ' + #13 + #10 + #13 + #10 +
+    'ATTENTION, Inicial Login :' + #13 + #10 + #13 + #10 + 'User: :user' +
+    #13 + #10 + 'Password : :password ' + #13 + #10 + #13 + #10 +
     'Define the permissions for this user.'), ('Const_Men_MaxTentativas',
     '%d Attempts of login invalid. By reasons of security the system will be closed.'),
     ('Const_Men_LoginInvalido', 'User invalids or password !'),
@@ -396,10 +396,10 @@ Const
 
     );
 
-  { ------------------------------------------------------------------------------ }
+{ ------------------------------------------------------------------------------ }
 
-Const
-  UC_SPANISH: Array [0 .. MaxArray, 0 .. 1] of string =
+const
+  UC_SPANISH: array [0 .. MaxArray, 0 .. 1] of string =
     (('Const_Contr_TitleLabel', 'Seleccionar Componentes del Formulario:'),
     ('Const_Contr_GroupLabel', 'Grupo:'), ('Const_Contr_CompDispLabel',
     'Componentes Disponibles:'), ('Const_Contr_CompSelLabel',
@@ -449,13 +449,13 @@ Const
     ('MsgExceptRightsTable',
     'La propiead RightTable requiere el nombre válido de una tabla para registrar/seleccionar los permisos de los usuarios'),
     ('MsgExceptConnector', 'Propriedade DataConnector não definida!'),
-    ('Const_Men_AutoLogonError', 'Error de Ingreso Automático!' + #13 + #10 +
-    'Especifique un Usuario y Contraseña Válidos.'),
+    ('Const_Men_AutoLogonError', 'Error de Ingreso Automático!' +
+    #13 + #10 + 'Especifique un Usuario y Contraseña Válidos.'),
     ('Const_Men_SenhaDesabitada', 'Contraseña vacía para el Usuario %s'),
     ('Const_Men_SenhaAlterada', '¡Se ha cambiado la Contraseña con éxito!'),
-    ('Const_Men_MsgInicial', 'ATENCION! Conección Inicial:' + #13 + #10 + #13 +
-    #10 + 'Usuario : :user' + #13 + #10 + 'Contraseña : :password' + #13 + #10 +
-    #13 + #10 + 'Defina permisos para este usuario'),
+    ('Const_Men_MsgInicial', 'ATENCION! Conección Inicial:' + #13 +
+    #10 + #13 + #10 + 'Usuario : :user' + #13 + #10 + 'Contraseña : :password' +
+    #13 + #10 + #13 + #10 + 'Defina permisos para este usuario'),
     ('Const_Men_MaxTentativas', '%d Intentos de conección inválidos !'),
     ('Const_Men_LoginInvalido', 'Usuario y/o Contraseña Incorrectos!'),
     ('Const_Men_UsuarioExiste',
@@ -597,10 +597,10 @@ Const
 
     );
 
-  { ------------------------------------------------------------------------------ }
+{ ------------------------------------------------------------------------------ }
 
-Const
-  UC_FRENCH: Array [0 .. MaxArray, 0 .. 1] of string =
+const
+  UC_FRENCH: array [0 .. MaxArray, 0 .. 1] of string =
     (('Const_Contr_TitleLabel', 'L''équipe de Composantes de la Forme  :'),
     ('Const_Contr_GroupLabel', 'Groupe :'), ('Const_Contr_CompDispLabel',
     'Composantes disponibles :'), ('Const_Contr_CompSelLabel',
@@ -804,35 +804,43 @@ Const
     ('Const_Inc_LabelStatus', 'Status'), ('Const_Inc_StatusActive', 'Ativo'),
     ('Const_Inc_StatusDisabled', 'Inativo'));
 
-Function RetornaLingua(Lingua: TUCLanguage; Prop: String): String;
+function RetornaLingua(Lingua: TUCLanguage; Prop: string): utf8string;
 
 implementation
 
-Function RetornaLingua(Lingua: TUCLanguage; Prop: String): String;
-Var
-  I: Integer;
-Begin
+function RetornaLingua(Lingua: TUCLanguage; Prop: string): utf8string;
+var
+  I: integer;
+  sResult: utf8string;
+begin
   Result := '';
-  For I := 0 to MaxArray do
-  Begin
-    Case Lingua of
+  for I := 0 to MaxArray do
+  begin
+    sResult := '';
+
+    case Lingua of
       ucPortuguesBr:
-        If UpperCase(UC_PTBR[I, 0]) = UpperCase(Prop) then
-          Result := UC_PTBR[I, 1];
+        if UpperCase(UC_PTBR[I, 0]) = UpperCase(Prop) then
+          sResult := UTF8Encode(UC_PTBR[I, 1]);
       ucEnglish:
-        If UpperCase(UC_ENGLISH[I, 0]) = UpperCase(Prop) then
-          Result := UC_ENGLISH[I, 1];
+        if UpperCase(UC_ENGLISH[I, 0]) = UpperCase(Prop) then
+          sResult := UC_ENGLISH[I, 1];
       ucSpanish:
         if UpperCase(UC_SPANISH[I, 0]) = UpperCase(Prop) then
-          Result := UC_SPANISH[I, 1];
+          sResult := UC_SPANISH[I, 1];
       ucFrench:
         if UpperCase(UC_FRENCH[I, 0]) = UpperCase(Prop) then
-          Result := UC_FRENCH[I, 1];
-    else
-      If UpperCase(UC_PTBR[I, 0]) = UpperCase(Prop) then
-        Result := UC_PTBR[I, 1];
-    End;
-  End;
-End;
+          sResult := UC_FRENCH[I, 1];
+      else
+        if UpperCase(UC_PTBR[I, 0]) = UpperCase(Prop) then
+          sResult := UC_PTBR[I, 1];
+    end;
+
+    Result :=  sResult;
+
+    if Result <> '' then
+      break;
+  end;
+end;
 
 end.

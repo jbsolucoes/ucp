@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="26">
+      <Unit0>
+        <Filename Value="UCDemo.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="37"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="4"/>
+        <CursorPos X="29" Y="18"/>
+        <UsageCount Value="37"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\package\connectors\UCSQLdbConn\UCSQLdbConn.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="129"/>
+        <CursorPos X="25" Y="146"/>
+        <UsageCount Value="12"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\package\lazarus\UCBase.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="825"/>
+        <CursorPos X="36" Y="825"/>
+        <UsageCount Value="13"/>
+        <Bookmarks Count="2">
+          <Item0 X="35" Y="1547" ID="2"/>
+          <Item1 X="3" Y="2186" ID="3"/>
+        </Bookmarks>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\package\lazarus\UCDataConnector.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="14" Y="14"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\package\lazarus\UCMessages.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="163"/>
+        <CursorPos X="30" Y="175"/>
+        <UsageCount Value="18"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\package\lazarus\UCSettings.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="119"/>
+        <CursorPos X="35" Y="142"/>
+        <UsageCount Value="17"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\package\lazarus\UcConsts_Language.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="804"/>
+        <CursorPos X="76" Y="826"/>
+        <UsageCount Value="17"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\package\lazarus\UserPermis_U.pas"/>
+        <ComponentName Value="UserPermis"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="17"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\source\ucaboutucpfrm.pas"/>
+        <ComponentName Value="UCAboutForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ucaboutucpfrm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="80"/>
+        <CursorPos X="24" Y="94"/>
+        <UsageCount Value="17"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\package\lazarus\IncPerfil_U.pas"/>
+        <ComponentName Value="frmIncluirPerfil"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="24" Y="16"/>
+        <UsageCount Value="16"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\package\lazarus\pUCFrame_User.pas"/>
+        <ComponentName Value="UCFrame_User"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="139"/>
+        <CursorPos X="41" Y="147"/>
+        <UsageCount Value="16"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\package\lazarus\pUCGeral.pas"/>
+        <ComponentName Value="FormUserPerf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="163"/>
+        <CursorPos X="43" Y="133"/>
+        <UsageCount Value="16"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\..\..\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3644"/>
+        <CursorPos Y="3657"/>
+        <UsageCount Value="10"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\package\lazarus\pUCFrame_Log.pas"/>
+        <ComponentName Value="UCFrame_Log"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="100"/>
+        <CursorPos X="20" Y="111"/>
+        <UsageCount Value="12"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\package\lazarus\UCDataInfo.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="216"/>
+        <UsageCount Value="12"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\package\lazarus\LoginWindow_U.pas"/>
+        <ComponentName Value="frmLoginWindow"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="15"/>
+        <CursorPos X="54" Y="25"/>
+        <UsageCount Value="12"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="..\package\lazarus\UserControl.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="256"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="..\package\connectors\UCSQLdbConn\ucsqldbconnreg.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="34" Y="22"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="..\package\connectors\UCZeosConn\UCZEOSConnReg.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="..\package\connectors\UCZeosConn\UCZEOSConn.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="30" Y="26"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="..\package\connectors\UCSQLdbConn\pcksqldbconn.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="50" Y="15"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="..\package\connectors\UCZeosConn\pckZeosConn.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="..\package\connectors\UCSQLdbConn\usqldbconn.lrs"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="28"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="..\package\lazarus\UCReg.pas"/>
+        <UnitName Value="UCReg"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="361"/>
+        <CursorPos X="77" Y="375"/>
+        <UsageCount Value="10"/>
+        <Bookmarks Count="1">
+          <Item0 X="8" Y="114" ID="1"/>
+        </Bookmarks>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="..\..\..\ide\lazarus.pp"/>
+        <UnitName Value="Lazarus"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="118"/>
+        <CursorPos Y="142"/>
+        <UsageCount Value="10"/>
+      </Unit25>
+    </Units>
+    <JumpHistory Count="1">
+      <Position1>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="22" Column="60" TopLine="4"/>
+      </Position1>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="2">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\package\connectors\UCZeosConn\UCZEOSConnReg.pas"/>
+        <Line Value="1"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\package\lazarus\UCBase.pas"/>
+        <Line Value="827"/>
+      </Item2>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

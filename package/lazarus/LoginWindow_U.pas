@@ -23,6 +23,9 @@ uses
   Windows, ComCtrls;
 
 type
+
+  { TfrmLoginWindow }
+
   TfrmLoginWindow = class(TForm)
     PTop: TPanel;
     ImgTop: TImage;
@@ -59,6 +62,8 @@ begin
   Action := caFree;
 end;
 
+
+
 procedure TfrmLoginWindow.BotoesClickVisualizacao(Sender: TObject);
 begin
   Self.ModalResult := mrOk;
@@ -66,6 +71,8 @@ end;
 
 procedure TfrmLoginWindow.BtCancelaClick(Sender: TObject);
 begin
+  Self.ModalResult := mrCancel;
+
   Application.Terminate;
 end;
 

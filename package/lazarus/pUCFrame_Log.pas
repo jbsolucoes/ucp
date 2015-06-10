@@ -30,8 +30,13 @@ uses
   Windows;
 
 type
+
+  { TUCFrame_Log }
+
   TUCFrame_Log = class(TFrame)
+    data2: TDateEdit;
     DataSource1: TDataSource;
+    data1: TDateEdit;
     ImageList1: TImageList;
     DBGrid1: TDBGrid;
     Panel1: TPanel;
@@ -43,21 +48,15 @@ type
     btfecha: TBitBtn;
     btexclui: TBitBtn;
     ComboUsuario: TComboBox;
-    {$IFNDEF FPC}
-    Data1: TDateTimePicker;
-    Data2: TDateTimePicker;
-    {$ELSE}
-    Data1: TDateEdit;
-    Data2: TDateEdit;
-    {$ENDIF}
+
     ComboNivel: TComboBox;
     procedure ComboNivelDrawItem(Control: TWinControl; Index: Integer;
       Rect: TRect; State: TOwnerDrawState);
+    procedure data1Change(Sender: TObject);
     procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure ComboUsuarioChange(Sender: TObject);
     procedure btexcluiClick(Sender: TObject);
-    procedure Data1Change(Sender: TObject);
     procedure btfiltroClick(Sender: TObject);
   private
     procedure AplicaFiltro;
@@ -96,6 +95,11 @@ begin
     ComboNivel.items[Index]);
   ComboNivel.Canvas.Draw(Rect.Left + 5, Rect.Top + 1, TempImg);
   FreeAndnil(TempImg);
+end;
+
+procedure TUCFrame_Log.data1Change(Sender: TObject);
+begin
+  btfiltro.Enabled := True;
 end;
 
 procedure TUCFrame_Log.DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
@@ -193,11 +197,6 @@ begin
 
 end;
 
-procedure TUCFrame_Log.Data1Change(Sender: TObject);
-begin
-  btfiltro.Enabled := True;
-end;
-
 procedure TUCFrame_Log.btfiltroClick(Sender: TObject);
 begin
   AplicaFiltro;
@@ -261,11 +260,9 @@ begin
   ComboNivel.ItemIndex := 0;
   ComboUsuario.items.Clear;
   Data1.Date := EncodeDate(StrToInt(FormatDateTime('yyyy', Date)), 1, 1);
-  {$IFNDEF FPC}
-  Data2.DateTime := Now;
-  {$ELSE}
+
   Data2.Date := Now;
-  {$ENDIF}
+
 
   if Assigned(ListIdUser) = False then
     ListIdUser := TStringList.Create

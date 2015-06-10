@@ -68,7 +68,7 @@ uses
   SysUtils,
   Menus,
   StdCtrls,
-  //UCAbout,
+  ucaboutucpfrm,
   UCIdle,
   UCObjSel_U,
   UCEditorForm_U,
@@ -111,21 +111,21 @@ end;
 
 procedure TUCAboutVarProperty.Edit;
 begin
-  {with TAboutFrmUCP.Create(nil) do
+  with TUCAboutForm.Create(nil) do
   begin
     ShowModal;
     Free;
-  end;}
+  end;
 end;
 
 function TUCAboutVarProperty.GetAttributes: TPropertyAttributes;
 begin
-  //Result := [paDialog, paReadOnly];
+  Result := [paDialog, paReadOnly];
 end;
 
 function TUCAboutVarProperty.GetValue: String;
 begin
-  Result := 'JBS Version ' + UCVersion;
+  Result := 'Laz UC Version ' + UCVersion;
 end;
 
 {$IFNDEF FPC}

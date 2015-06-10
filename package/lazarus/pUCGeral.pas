@@ -33,7 +33,7 @@ type
     Panel2: TPanel;
     SpeedUser: TSpeedButton;
     SpeedPerfil: TSpeedButton;
-    Panel3: TPanel;
+    PanelFrames: TPanel;
     SpeedLog: TSpeedButton;
     SpeedUserLog: TSpeedButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -129,9 +129,12 @@ begin
   FrmFrame := TFrame_Profile.Create(Self);
   TFrame_Profile(FrmFrame).DataPerfil.DataSet :=
     FUsercontrol.CurrentUser.PerfilGrupo;
+
+  FrmFrame.Parent := PanelFrames;
+  TFrame_Profile(FrmFrame).Align:=alClient;
   TFrame_Profile(FrmFrame).BtnClose.ModalResult := mrOk;
-  TFrame_Profile(FrmFrame).Height := Panel3.Height;
-  TFrame_Profile(FrmFrame).Width := Panel3.Width;
+{  TFrame_Profile(FrmFrame).Height := PanelFrames.Height;
+  TFrame_Profile(FrmFrame).Width := PanelFrames.Width;}
   TFrame_Profile(FrmFrame).FDataSetPerfilUsuario :=
     FUsercontrol.CurrentUser.PerfilGrupo;
   TFrame_Profile(FrmFrame).FUsercontrol := FUsercontrol;
@@ -146,7 +149,7 @@ begin
     BtnAcePer.Caption := BtRights;
     BtnClose.Caption := BtClose;
   end;
-  FrmFrame.Parent := Panel3;
+
 end;
 
 procedure TFormUserPerf.SpeedUserClick(Sender: TObject);
@@ -166,12 +169,14 @@ begin
     FUsercontrol.CurrentUser.PerfilGrupo;
   TUCFrame_User(FrmFrame).BtnClose.ModalResult := mrOk;
   TUCFrame_User(FrmFrame).FUsercontrol := FUsercontrol;
-  TUCFrame_User(FrmFrame).Height := Panel3.Height;
-  TUCFrame_User(FrmFrame).Width := Panel3.Width;
+  FrmFrame.Parent := PanelFrames;
+  TUCFrame_User(FrmFrame).Align:=alClient;
+{  TUCFrame_User(FrmFrame).Height := PanelFrames.Height;
+  TUCFrame_User(FrmFrame).Width := PanelFrames.Width;  }
   TUCFrame_User(FrmFrame).SetWindow;
   LbDescricao.Caption := FUsercontrol.UserSettings.UsersForm.LabelDescription;
 
-  FrmFrame.Parent := Panel3;
+
 end;
 
 procedure TFormUserPerf.SpeedUserLogClick(Sender: TObject);
@@ -186,10 +191,10 @@ begin
   LbDescricao.Caption := FUsercontrol.UserSettings.UsersLogged.LabelDescricao;
   TUCFrame_UsersLogged(FrmFrame).FUsercontrol := FUsercontrol;
   TUCFrame_UsersLogged(FrmFrame).SetWindow;
-  TUCFrame_UsersLogged(FrmFrame).Height := Panel3.Height;
-  TUCFrame_UsersLogged(FrmFrame).Width := Panel3.Width;
+  TUCFrame_UsersLogged(FrmFrame).Height := PanelFrames.Height;
+  TUCFrame_UsersLogged(FrmFrame).Width := PanelFrames.Width;
   TUCFrame_UsersLogged(FrmFrame).BtExit.ModalResult := mrOk;
-  FrmFrame.Parent := Panel3;
+  FrmFrame.Parent := PanelFrames;
 end;
 
 procedure TFormUserPerf.SpeedUserMouseEnter(Sender: TObject);
@@ -222,10 +227,12 @@ begin
   LbDescricao.Caption := FUsercontrol.UserSettings.Log.LabelDescription;
   TUCFrame_Log(FrmFrame).FUsercontrol := FUsercontrol;
   TUCFrame_Log(FrmFrame).SetWindow;
-  TUCFrame_Log(FrmFrame).Height := Panel3.Height;
-  TUCFrame_Log(FrmFrame).Width := Panel3.Width;
+  FrmFrame.Parent := PanelFrames;
+  TUCFrame_Log(FrmFrame).Align:=alClient;
+  {TUCFrame_Log(FrmFrame).Height := PanelFrames.Height;
+  TUCFrame_Log(FrmFrame).Width := PanelFrames.Width;}
   TUCFrame_Log(FrmFrame).btfecha.ModalResult := mrOk;
-  FrmFrame.Parent := Panel3;
+
 end;
 
 end.

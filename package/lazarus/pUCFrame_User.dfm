@@ -3,6 +3,7 @@ object UCFrame_User: TUCFrame_User
   Height = 317
   Top = 0
   Width = 594
+  Align = alClient
   AutoSize = True
   ClientHeight = 317
   ClientWidth = 594

@@ -1,4 +1,4 @@
-unit UCAbout;
+unit ucaboutucpfrm;
 
 interface
 
@@ -17,7 +17,11 @@ uses
   StdCtrls;
 
 type
-  TAboutForm = class(TForm)
+
+  { TUCAboutForm }
+
+  TUCAboutForm = class(TForm)
+    Button1: TButton;
     Panel1: TPanel;
     Image1: TImage;
     Image2: TImage;
@@ -41,6 +45,7 @@ type
     pnlFundo: TPanel;
     pnlComponentes: TPanel;
     Image4: TImage;
+    procedure Button1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Label4Click(Sender: TObject);
     procedure Label6Click(Sender: TObject);
@@ -55,10 +60,8 @@ type
     { Public declarations }
   end;
 
-  {
-    var
-    AboutForm: TAboutForm;
-  }
+  var
+    AboutFrmUCP: TUCAboutForm;
 
 implementation
 
@@ -67,46 +70,51 @@ uses
   UCBase,
   Windows;
 
-{$R *.dfm}
+{$R ucaboutucpfrm.lfm}
 
-procedure TAboutForm.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TUCAboutForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Action := caFree;
 end;
 
-procedure TAboutForm.Label4Click(Sender: TObject);
+procedure TUCAboutForm.Button1Click(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TUCAboutForm.Label4Click(Sender: TObject);
 begin
   // ShellExecute(0, 'open', 'mailto:qmd@usercontrol.com.br', '', '', SW_SHOW);
 end;
 
-procedure TAboutForm.Label6Click(Sender: TObject);
+procedure TUCAboutForm.Label6Click(Sender: TObject);
 begin
   // ShellExecute(0, 'open', 'http://www.usercontrol.net', '', '', SW_SHOW);
 end;
 
-procedure TAboutForm.Image2Click(Sender: TObject);
+procedure TUCAboutForm.Image2Click(Sender: TObject);
 begin
   // ShellExecute(0, 'open', 'http://delphiland.dyns.cx', nil, nil, SW_SHOW);
 end;
 
-procedure TAboutForm.Image3Click(Sender: TObject);
+procedure TUCAboutForm.Image3Click(Sender: TObject);
 begin
   // ShellExecute(0, 'open', 'http://www.curitiba.pr.gov.br/', nil, nil, SW_SHOW);
 end;
 
-procedure TAboutForm.FormCreate(Sender: TObject);
+procedure TUCAboutForm.FormCreate(Sender: TObject);
 begin
   Self.BorderStyle := bsNone;
-  lblVersao.Caption := 'Vers„o ' + UCVersion;
+  lblVersao.Caption := 'Vers√£o ' + UCVersion;
 end;
 
-procedure TAboutForm.FormShow(Sender: TObject);
+procedure TUCAboutForm.FormShow(Sender: TObject);
 begin
   // pnlComponentes.Top  := Round((pnlFundo.Height - pnlComponentes.Height) / 2);
   // pnlComponentes.Left := Round((pnlFundo.Width - pnlComponentes.Width) / 2);
 end;
 
-procedure TAboutForm.WMNChitTest(var M: TWMNchitTest);
+procedure TUCAboutForm.WMNChitTest(var M: TWMNchitTest);
 begin
   inherited;
   if M.result = htclient then
