@@ -310,7 +310,7 @@ object Form1: TForm1
     ChangePassword.BtCancel = 'Cancelar'
     ResetPassword.WindowCaption = 'Definir senha do usuário : "%s"'
     ResetPassword.LabelPassword = 'Senha :'
-    BancoDados = Firebird
+    BancoDados = MySql
     Language = ucPortuguesBr
     UsersLogged.BtnMessage = '&Mensagem'
     UsersLogged.BtnRefresh = '&Atualizar'

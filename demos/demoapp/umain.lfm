@@ -1,0 +1,123 @@
+object Form1: TForm1
+  Left = 316
+  Height = 309
+  Top = 165
+  Width = 697
+  Caption = 'Demonstração UserControl'
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '1.4.0.4'
+  object MainMenu1: TMainMenu
+    left = 39
+    top = 45
+    object MenuItem1: TMenuItem
+      Caption = 'Cadastros'
+      object MenuItem2: TMenuItem
+        Action = actCadastroClientes
+      end
+      object MenuItem3: TMenuItem
+        Action = actCadastroProdutos
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Sistema'
+      object MenuItem6: TMenuItem
+        Action = actControleUsuarios
+      end
+      object MenuItem7: TMenuItem
+        Action = actAlterarSenha
+      end
+      object MenuItem8: TMenuItem
+        Action = actLogout
+      end
+    end
+  end
+  object ActionList1: TActionList
+    left = 460
+    top = 46
+    object actCadastroClientes: TAction
+      Category = 'Cadastros'
+      Caption = 'Cadastro de Clientes'
+      OnExecute = actCadastroClientesExecute
+    end
+    object actCadastroProdutos: TAction
+      Category = 'Cadastros'
+      Caption = 'Cadastro de Produtos'
+      OnExecute = actCadastroProdutosExecute
+    end
+    object actControleUsuarios: TAction
+      Category = 'Sistema'
+      Caption = 'Controle de Usuários'
+    end
+    object actAlterarSenha: TAction
+      Category = 'Sistema'
+      Caption = 'Alterar Senha'
+    end
+    object actLogout: TAction
+      Category = 'Sistema'
+      Caption = 'Logout'
+    end
+  end
+  object IBConnection1: TIBConnection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'C:\lazarus\components\ucp\demos\demoapp\DEMODB.FDB'
+    KeepConnection = False
+    Password = 'masterkey'
+    Transaction = SQLTransaction1
+    UserName = 'SYSDBA'
+    LogEvents = []
+    left = 398
+    top = 90
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = IBConnection1
+    left = 437
+    top = 88
+  end
+  object UserControl1: TUserControl
+    AutoStart = True
+    ApplicationID = 'DemoApp'
+    ControlRight.ActionList = ActionList1
+    User.Action = actControleUsuarios
+    UserPasswordChange.Action = actAlterarSenha
+    UsersLogoff.Action = actLogout
+    LogControl.TableLog = 'UCLog'
+    Language = ucPortuguesBr
+    EncryptKey = 0
+    Login.InitialLogin.User = 'admin'
+    Login.InitialLogin.Email = 'usercontrol@usercontrol.net'
+    Login.InitialLogin.Password = '123mudar'
+    Login.MaxLoginAttempts = 0
+    ExtraRights = <>
+    TableUsers.FieldUserID = 'UCIdUser'
+    TableUsers.FieldUserName = 'UCUserName'
+    TableUsers.FieldLogin = 'UCLogin'
+    TableUsers.FieldPassword = 'UCPassword'
+    TableUsers.FieldEmail = 'UCEmail'
+    TableUsers.FieldPrivileged = 'UCPrivileged'
+    TableUsers.FieldTypeRec = 'UCTypeRec'
+    TableUsers.FieldProfile = 'UCProfile'
+    TableUsers.FieldKey = 'UCKey'
+    TableUsers.FieldDateExpired = 'UCPASSEXPIRED'
+    TableUsers.FieldUserExpired = 'UCUserExpired'
+    TableUsers.FieldUserDaysSun = 'UCUserDaysSun'
+    TableUsers.FieldUserInative = 'UCInative'
+    TableUsers.TableName = 'UCTabUsers'
+    TableRights.FieldUserID = 'UCIdUser'
+    TableRights.FieldModule = 'UCModule'
+    TableRights.FieldComponentName = 'UCCompName'
+    TableRights.FieldFormName = 'UCFormName'
+    TableRights.FieldKey = 'UCKey'
+    TableRights.TableName = 'UCTabRights'
+    DataConnector = UCSQLdbConn1
+    left = 213
+    top = 70
+  end
+  object UCSQLdbConn1: TUCSQLdbConn
+    Connection = IBConnection1
+    left = 260
+    top = 70
+  end
+end
