@@ -7,7 +7,7 @@ unit pckUserControlDesign;
 interface
 
 uses
-  ucaboutucpfrm, UCEditorForm_U, UCIdle, UCReg, UCBase, LazarusPackageIntf;
+  ucaboutucpfrm, UCEditorForm_U, UCIdle, UCReg, LazarusPackageIntf;
 
 implementation
 
