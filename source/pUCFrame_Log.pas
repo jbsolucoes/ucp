@@ -22,7 +22,7 @@ uses
   ImgList,
   Messages,
   StdCtrls,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType, LCLIntf, {$ENDIF}
   SysUtils,
   {$IFDEF FPC}
   EditBtn,

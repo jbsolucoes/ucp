@@ -70,7 +70,7 @@ uses
   UCIdle,
   UCObjSel_U,
   UCEditorForm_U,
-  UcMail,
+  UCMail,
   UCSettings;
 
 procedure Register;

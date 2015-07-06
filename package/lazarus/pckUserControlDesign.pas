@@ -7,12 +7,13 @@ unit pckUserControlDesign;
 interface
 
 uses
-  ucaboutucpfrm, UCEditorForm_U, UCIdle, UCReg, LazarusPackageIntf;
+  ucaboutucpfrm, UCEditorForm_U, UCIdle, UCReg, UCBase, LazarusPackageIntf;
 
 implementation
 
 procedure Register;
 begin
+  RegisterUnit('UCReg', @UCReg.Register);
 end;
 
 initialization

@@ -66,9 +66,7 @@ type
 implementation
 
 uses
-  ShellAPI,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
-  UCBase;
+  {$IFDEF WINDOWS}ShellAPI, Windows{$ELSE}LCLType{$ENDIF}, UCBase;
 
 {$R ucaboutucpfrm.lfm}
 

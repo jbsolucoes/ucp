@@ -131,7 +131,11 @@ begin
   if Key = #13 then
   Begin
     Key := #0;
+    {$IFDEF WINDOWS}
     Perform(WM_NEXTDLGCTL, 0, 0);
+    {$ELSE}
+    SelectNext(ActiveControl,true, true);
+    {$ENDIF}
   End;
 end;
 

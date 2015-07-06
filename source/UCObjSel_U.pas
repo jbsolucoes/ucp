@@ -23,8 +23,8 @@ uses
   StdCtrls,
   SysUtils,
   UCBase,
-  UcConsts_Language,
-  Windows;
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  UcConsts_Language;
 
 type
   TQControl = class(TControl)

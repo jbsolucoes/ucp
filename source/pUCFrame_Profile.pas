@@ -23,7 +23,7 @@ uses
   StdCtrls,
   SysUtils,
   UcBase,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType, LCLIntf, {$ENDIF}
   UserPermis_U;
 
 type

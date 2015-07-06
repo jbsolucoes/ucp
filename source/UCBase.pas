@@ -41,7 +41,7 @@ uses
   {$ENDIF}
   UCMessages,
   UCSettings,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType, unix, {$ENDIF}
   Variants;
 
 const
@@ -1115,6 +1115,7 @@ begin
 end;
 
 function TUserControl.GetLocalComputerName: String;
+{$IFDEF WINDOWS}
 var
   Count: DWORD;
   Buffer: String;
@@ -1127,8 +1128,14 @@ begin
     Buffer := '';
   Result := Buffer;
 end;
+{$ELSE IFDEF UNIX}
+begin
+  result := GetHostName;
+end;
+{$ENDIF}
 
 function TUserControl.GetLocalUserName: String;
+{$IFDEF WINDOWS}
 var
   Count: DWORD;
   Buffer: String;
@@ -1141,6 +1148,11 @@ begin
     Buffer := '';
   Result := Buffer;
 end;
+{$ELSE IFDEF UNIX}
+begin
+  result := GetEnvironmentVariable('USERNAME');
+end;
+{$ENDIF}
 
 procedure TUserControl.CriaFormTrocarSenha;
 begin
