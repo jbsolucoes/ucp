@@ -24,8 +24,8 @@ uses
   StdCtrls,
   SysUtils,
   UcBase,
-  UserPermis_U,
-  Windows;
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  UserPermis_U;
 
 type
   TUCFrame_User = class(TFrame)

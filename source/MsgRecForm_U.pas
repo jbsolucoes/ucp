@@ -18,8 +18,8 @@ uses
   Messages,
   StdCtrls,
   SysUtils,
-  UCBase,
-  Windows;
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  UCBase;
 
 type
   TMsgRecForm = class(TForm)

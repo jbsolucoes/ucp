@@ -21,8 +21,8 @@ uses
   Spin,
   StdCtrls,
   SysUtils,
-  UCBase,
-  Windows;
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  UCBase;
 
 type
   TfrmIncluirUsuario = class(TForm)

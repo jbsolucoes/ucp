@@ -67,8 +67,8 @@ implementation
 
 uses
   ShellAPI,
-  UCBase,
-  Windows;
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  UCBase;
 
 {$R ucaboutucpfrm.lfm}
 

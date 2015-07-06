@@ -20,8 +20,8 @@ uses
   Messages,
   StdCtrls,
   SysUtils,
-  ToolWin,
-  Windows;
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  ToolWin;
 
 type
   TPointMsg = ^PPointMsg;

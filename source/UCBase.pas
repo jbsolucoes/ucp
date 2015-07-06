@@ -41,8 +41,8 @@ uses
   {$ENDIF}
   UCMessages,
   UCSettings,
-  Variants,
-  Windows;
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  Variants;
 
 const
   llBaixo = 0;

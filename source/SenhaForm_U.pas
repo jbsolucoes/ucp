@@ -15,7 +15,7 @@ uses
   StdCtrls,
   SysUtils,
   Variants,
-  Windows,
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
   UCBase;
 
 type

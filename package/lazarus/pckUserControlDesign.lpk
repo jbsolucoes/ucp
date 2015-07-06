@@ -9,8 +9,8 @@
       <Version Value="11"/>
       <PathDelim Value="\"/>
       <SearchPaths>
-        <IncludeFiles Value="C:\opt\lazarus\components\usercontrol\source\"/>
-        <OtherUnitFiles Value="C:\opt\lazarus\components\usercontrol\source\;..\..\source"/>
+        <IncludeFiles Value="..\..\source"/>
+        <OtherUnitFiles Value="..\..\source"/>
         <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
       <Parsing>
@@ -30,32 +30,27 @@
       </Other>
     </CompilerOptions>
     <Version Major="2" Minor="32"/>
-    <Files Count="6">
+    <Files Count="5">
       <Item1>
-        <Filename Value="UCEditorForm_U.pas"/>
-        <UnitName Value="UCEditorForm_U"/>
+        <Filename Value="..\..\source\ucaboutucpfrm.pas"/>
+        <UnitName Value="ucaboutucpfrm"/>
       </Item1>
       <Item2>
-        <Filename Value="UCIdle.pas"/>
-        <UnitName Value="UCIdle"/>
+        <Filename Value="..\..\source\UCEditorForm_U.pas"/>
+        <UnitName Value="UCEditorForm_U"/>
       </Item2>
       <Item3>
-        <Filename Value="UCObjSel_U.pas"/>
-        <UnitName Value="UCObjSel_U"/>
+        <Filename Value="..\..\source\UCIdle.pas"/>
+        <UnitName Value="UCIdle"/>
       </Item3>
       <Item4>
-        <Filename Value="UCReg.pas"/>
-        <HasRegisterProc Value="True"/>
+        <Filename Value="..\..\source\UCReg.pas"/>
         <UnitName Value="UCReg"/>
       </Item4>
       <Item5>
-        <Filename Value="UserControl.inc"/>
+        <Filename Value="..\..\source\UserControl.inc"/>
         <Type Value="Include"/>
       </Item5>
-      <Item6>
-        <Filename Value="..\..\source\ucaboutucpfrm.pas"/>
-        <UnitName Value="ucaboutucpfrm"/>
-      </Item6>
     </Files>
     <i18n>
       <EnableI18N Value="True"/>

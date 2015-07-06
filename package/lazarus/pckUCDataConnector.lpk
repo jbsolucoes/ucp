@@ -3,13 +3,14 @@
   <Package Version="4">
     <PathDelim Value="\"/>
     <Name Value="pckUCDataConnector"/>
+    <Type Value="RunAndDesignTime"/>
     <AddToProjectUsesSection Value="True"/>
     <CompilerOptions>
       <Version Value="11"/>
       <PathDelim Value="\"/>
       <SearchPaths>
-        <IncludeFiles Value="C:\opt\lazarus\components\usercontrol\source\"/>
-        <OtherUnitFiles Value="C:\opt\lazarus\components\usercontrol\source\"/>
+        <IncludeFiles Value="..\..\source"/>
+        <OtherUnitFiles Value="..\..\source"/>
         <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
       <Parsing>
@@ -26,21 +27,19 @@
         <Verbosity>
           <ShowAll Value="True"/>
         </Verbosity>
-        <CompilerPath Value="$(CompPath)"/>
       </Other>
     </CompilerOptions>
     <Version Major="2" Minor="32"/>
     <Files Count="2">
       <Item1>
-        <Filename Value="UserControl.inc"/>
-        <Type Value="Include"/>
+        <Filename Value="..\..\source\UCDataConnector.pas"/>
+        <UnitName Value="UCDataConnector"/>
       </Item1>
       <Item2>
-        <Filename Value="UCDataConnector.pas"/>
-        <UnitName Value="UCDataConnector"/>
+        <Filename Value="..\..\source\UserControl.inc"/>
+        <Type Value="Include"/>
       </Item2>
     </Files>
-    <Type Value="RunAndDesignTime"/>
     <RequiredPkgs Count="1">
       <Item1>
         <PackageName Value="LCL"/>
@@ -53,5 +52,8 @@
     <PublishOptions>
       <Version Value="2"/>
     </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
   </Package>
 </CONFIG>

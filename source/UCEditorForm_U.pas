@@ -178,8 +178,8 @@ uses
   ShellAPI,
   SysUtils,
   UcConsts_Language,
-  UCMessages,
-  Windows;
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  UCMessages;
 
 {$R *.dfm}
 

@@ -23,8 +23,8 @@ uses
   StdCtrls,
   SysUtils,
   UcBase,
-  UserPermis_U,
-  Windows;
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  UserPermis_U;
 
 type
   TFrame_Profile = class(TFrame)

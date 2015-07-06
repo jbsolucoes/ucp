@@ -22,12 +22,12 @@ uses
   ImgList,
   Messages,
   StdCtrls,
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
   SysUtils,
-  UCBase,
   {$IFDEF FPC}
   EditBtn,
   {$ENDIF}
-  Windows;
+  UCBase;
 
 type
   TUCFrame_Log = class(TFrame)

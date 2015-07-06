@@ -4,7 +4,8 @@ interface
 
 {$I 'UserControl.inc'}
 
-uses Classes, UCBase, Dialogs, Windows, Forms, ExtCtrls, Messages, SysUtils;
+uses Classes, UCBase, Dialogs, {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  Forms, ExtCtrls, Messages, SysUtils;
 
 type
 

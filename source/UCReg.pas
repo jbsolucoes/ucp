@@ -66,7 +66,7 @@ uses
   SysUtils,
   Menus,
   StdCtrls,
-  UCAbout,
+  ucaboutucpfrm,
   UCIdle,
   UCObjSel_U,
   UCEditorForm_U,
@@ -109,7 +109,7 @@ end;
 
 procedure TUCAboutVarProperty.Edit;
 begin
-  with TAboutForm.Create(nil) do
+  with TUCAboutForm.Create(nil) do
   begin
     ShowModal;
     Free;

@@ -3,24 +3,21 @@
   <Package Version="4">
     <PathDelim Value="\"/>
     <Name Value="pckZeosConn"/>
+    <Type Value="RunAndDesignTime"/>
     <CompilerOptions>
       <Version Value="11"/>
       <PathDelim Value="\"/>
       <SearchPaths>
-        <IncludeFiles Value="C:\codetyphon\typhon\components\ucp\package\lazarus\"/>
+        <IncludeFiles Value="..\..\..\source"/>
         <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
       <Parsing>
         <SyntaxOptions>
-          <SyntaxMode Value="delphi"/>
+          <SyntaxMode Value="Delphi"/>
         </SyntaxOptions>
       </Parsing>
       <Other>
-        <CompilerMessages>
-          <MsgFileName Value=""/>
-        </CompilerMessages>
         <CustomOptions Value="-dBorland -dVer150 -dDelphi7 -dCompiler6_Up -dPUREPASCAL"/>
-        <CompilerPath Value="$(CompPath)"/>
       </Other>
     </CompilerOptions>
     <Files Count="3">
@@ -34,11 +31,10 @@
         <UnitName Value="UCZEOSConnReg"/>
       </Item2>
       <Item3>
-        <Filename Value="..\..\lazarus\UserControl.inc"/>
+        <Filename Value="..\..\..\source\UserControl.inc"/>
         <Type Value="Include"/>
       </Item3>
     </Files>
-    <Type Value="RunAndDesignTime"/>
     <RequiredPkgs Count="3">
       <Item1>
         <PackageName Value="zcomponent"/>

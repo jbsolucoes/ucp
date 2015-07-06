@@ -18,7 +18,7 @@ uses
   Messages,
   StdCtrls,
   SysUtils,
-  Windows,
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
   // UCConsts,
   UCBase; { Por Vicente Barros Leonel }
 

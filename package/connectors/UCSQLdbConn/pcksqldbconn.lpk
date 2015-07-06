@@ -8,12 +8,12 @@
       <Version Value="11"/>
       <PathDelim Value="\"/>
       <SearchPaths>
-        <IncludeFiles Value="C:\codetyphon\typhon\components\ucp\package\lazarus\"/>
+        <IncludeFiles Value="..\..\..\source"/>
         <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
       <Parsing>
         <SyntaxOptions>
-          <SyntaxMode Value="delphi"/>
+          <SyntaxMode Value="Delphi"/>
         </SyntaxOptions>
       </Parsing>
       <Other>
@@ -31,12 +31,12 @@
         <UnitName Value="ucsqldbconnreg"/>
       </Item2>
       <Item3>
-        <Filename Value="..\..\lazarus\UserControl.inc"/>
-        <Type Value="Include"/>
-      </Item3>
-      <Item4>
         <Filename Value="ucsqldbconn.lrs"/>
         <Type Value="LRS"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\..\..\source\UserControl.inc"/>
+        <Type Value="Include"/>
       </Item4>
     </Files>
     <RequiredPkgs Count="2">

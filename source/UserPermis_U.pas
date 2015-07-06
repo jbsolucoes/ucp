@@ -126,8 +126,8 @@ implementation
 uses
   ActnList,
   Messages,
-  SysUtils,
-  Windows;
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  SysUtils;
 
 {$R *.dfm}
 

@@ -112,12 +112,12 @@ object Form1: TForm1
     TableRights.FieldKey = 'UCKey'
     TableRights.TableName = 'UCTabRights'
     DataConnector = UCSQLdbConn1
-    left = 213
-    top = 70
+    left = 240
+    top = 176
   end
   object UCSQLdbConn1: TUCSQLdbConn
     Connection = IBConnection1
-    left = 260
-    top = 70
+    left = 287
+    top = 176
   end
 end

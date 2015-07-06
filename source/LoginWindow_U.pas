@@ -20,7 +20,8 @@ uses
   StdCtrls,
   SysUtils,
   UCBase,
-  Windows, ComCtrls;
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  ComCtrls;
 
 type
   TfrmLoginWindow = class(TForm)
