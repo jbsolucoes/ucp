@@ -19,8 +19,7 @@ Enjoy!
 
 Best regards,
 
-José Benedito - www.jbsolucoes.net
-
+JB
 ```
 sac@jbsolucoes.net 
 josebenedito@gmail.com
