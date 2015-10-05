@@ -1,0 +1,83 @@
+object Form1: TForm1
+  Left = 316
+  Height = 309
+  Top = 165
+  Width = 697
+  Caption = 'Demonstração UserControl'
+  Menu = MainMenu1
+  LCLVersion = '1.4.0.4'
+  object MainMenu1: TMainMenu
+    left = 39
+    top = 45
+    object MenuItem1: TMenuItem
+      Caption = 'Cadastros'
+      object MenuItem2: TMenuItem
+        Action = actCadastroClientes
+      end
+      object MenuItem3: TMenuItem
+        Action = actCadastroProdutos
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Sistema'
+      object MenuItem5: TMenuItem
+        Action = actControleAcesso
+      end
+      object MenuItem6: TMenuItem
+        Action = actControleUsuarios
+      end
+      object MenuItem7: TMenuItem
+        Action = actAlterarSenha
+      end
+      object MenuItem8: TMenuItem
+        Action = actLogout
+      end
+    end
+  end
+  object ActionList1: TActionList
+    left = 460
+    top = 46
+    object actCadastroClientes: TAction
+      Category = 'Cadastros'
+      Caption = 'Cadastro de Clientes'
+    end
+    object actCadastroProdutos: TAction
+      Category = 'Cadastros'
+      Caption = 'Cadastro de Produtos'
+    end
+    object actControleUsuarios: TAction
+      Category = 'Sistema'
+      Caption = 'Controle de Usuários'
+    end
+    object actAlterarSenha: TAction
+      Category = 'Sistema'
+      Caption = 'Alterar Senha'
+    end
+    object actLogout: TAction
+      Category = 'Sistema'
+      Caption = 'Logout'
+    end
+    object actControleAcesso: TAction
+      Category = 'Sistema'
+      Caption = 'Controle de Acessos'
+    end
+  end
+  object IBConnection1: TIBConnection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'C:\lazarus\components\ucp\demos\demoapp\DEMODB.FDB'
+    KeepConnection = False
+    Password = 'masterkey'
+    Transaction = SQLTransaction1
+    UserName = 'SYSDBA'
+    LogEvents = []
+    left = 398
+    top = 90
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = IBConnection1
+    left = 437
+    top = 88
+  end
+end
