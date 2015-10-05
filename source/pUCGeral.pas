@@ -26,6 +26,9 @@ uses
   Variants;
 
 type
+
+  { TFormUserPerf }
+
   TFormUserPerf = class(TForm)
     Panel1: TPanel;
     LbDescricao: TLabel;
@@ -51,7 +54,8 @@ type
     { Private declarations }
   public
     FUsercontrol: TUserControl;
-    { Public declarations }
+
+    procedure LoadDatasets;
   end;
 
 var
@@ -83,7 +87,7 @@ begin
     Close;
 end;
 
-procedure TFormUserPerf.FormShow(Sender: TObject);
+procedure TFormUserPerf.LoadDatasets;
 begin
   with FUsercontrol do
   begin
@@ -105,6 +109,11 @@ begin
       TableUsers.FieldTypeRec, TableUsers.TableName, TableUsers.FieldTypeRec,
       QuotedStr('P'), TableUsers.FieldUserName]));
   end;
+end;
+
+procedure TFormUserPerf.FormShow(Sender: TObject);
+begin
+  LoadDatasets;
 
   SpeedPerfil.Visible := FUsercontrol.UserProfile.Active;
   SpeedLog.Visible := FUsercontrol.LogControl.Active;
@@ -125,6 +134,8 @@ begin
     Exit;
   if Assigned(FrmFrame) then
     FreeAndNil(FrmFrame);
+
+  LoadDatasets;
 
   FrmFrame := TFrame_Profile.Create(Self);
   TFrame_Profile(FrmFrame).DataPerfil.DataSet :=
@@ -156,6 +167,8 @@ begin
 
   if Assigned(FrmFrame) then
     FreeAndNil(FrmFrame);
+
+  LoadDatasets;
 
   FrmFrame := TUCFrame_User.Create(Self);
   TUCFrame_User(FrmFrame).FDataSetCadastroUsuario :=

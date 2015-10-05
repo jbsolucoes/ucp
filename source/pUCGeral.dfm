@@ -1,53 +1,55 @@
 object FormUserPerf: TFormUserPerf
   Left = 0
+  Height = 506
   Top = 0
+  Width = 692
   BorderStyle = bsDialog
-  Caption = 'Controle de Usu'#225'rios'
+  Caption = 'Controle de Usuários'
   ClientHeight = 506
   ClientWidth = 692
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
-  Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
-  Position = poScreenCenter
   OnClose = FormClose
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
-  TextHeight = 13
+  Position = poScreenCenter
+  LCLVersion = '1.4.2.0'
   object Panel1: TPanel
     Left = 0
+    Height = 41
     Top = 0
     Width = 692
-    Height = 41
     Align = alTop
     BevelOuter = bvNone
+    ClientHeight = 41
+    ClientWidth = 692
     Color = clWhite
+    ParentColor = False
     TabOrder = 0
     object LbDescricao: TLabel
       Left = 41
+      Height = 41
       Top = 0
       Width = 183
-      Height = 18
       Align = alLeft
-      Caption = 'Controle de Usu'#225'rios'
-      Font.Charset = ANSI_CHARSET
+      Caption = 'Controle de Usuários'
+      Font.CharSet = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
       Font.Name = 'Verdana'
       Font.Style = [fsBold]
-      ParentFont = False
       Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
     end
     object Image1: TImage
       Left = 0
+      Height = 41
       Top = 0
       Width = 41
-      Height = 41
       Align = alLeft
       Center = True
       Picture.Data = {
@@ -126,30 +128,32 @@ object FormUserPerf: TFormUserPerf
         6DA5C888AFC90000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
-        000000000000000000000000000000000000}
+        000000000000000000000000000000000000
+      }
       Transparent = True
-      ExplicitHeight = 35
     end
   end
   object Panel2: TPanel
     Left = 0
+    Height = 465
     Top = 41
     Width = 100
-    Height = 465
     Align = alLeft
     BevelOuter = bvLowered
+    ClientHeight = 465
+    ClientWidth = 100
     Color = clSilver
+    ParentColor = False
     TabOrder = 1
     object SpeedUser: TSpeedButton
+      Cursor = crHandPoint
       Left = 1
+      Height = 60
       Top = 1
       Width = 98
-      Height = 60
-      Cursor = crHandPoint
       Align = alTop
-      GroupIndex = 1
+      Caption = '&Usuários'
       Down = True
-      Caption = '&Usu'#225'rios'
       Flat = True
       Glyph.Data = {
         66090000424D660900000000000036000000280000001C0000001C0000000100
@@ -227,23 +231,21 @@ object FormUserPerf: TFormUserPerf
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
-        00000000000000000000}
+        00000000000000000000
+      }
+      GroupIndex = 1
       Layout = blGlyphTop
       OnClick = SpeedUserClick
       OnMouseEnter = SpeedUserMouseEnter
       OnMouseLeave = SpeedUserMouseLeave
-      ExplicitLeft = -4
-      ExplicitTop = 6
-      ExplicitWidth = 95
     end
     object SpeedPerfil: TSpeedButton
+      Cursor = crHandPoint
       Left = 1
+      Height = 60
       Top = 61
       Width = 98
-      Height = 60
-      Cursor = crHandPoint
       Align = alTop
-      GroupIndex = 1
       Caption = '&Perfil'
       Flat = True
       Glyph.Data = {
@@ -322,22 +324,21 @@ object FormUserPerf: TFormUserPerf
         00D27100D27100D27100D271009CB0FF486DFF00000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
-        000000009CB0FF7893FF}
+        000000009CB0FF7893FF
+      }
+      GroupIndex = 1
       Layout = blGlyphTop
       OnClick = SpeedPerfilClick
       OnMouseEnter = SpeedUserMouseEnter
       OnMouseLeave = SpeedUserMouseLeave
-      ExplicitLeft = -4
-      ExplicitTop = 45
     end
     object SpeedLog: TSpeedButton
+      Cursor = crHandPoint
       Left = 1
+      Height = 60
       Top = 121
       Width = 98
-      Height = 60
-      Cursor = crHandPoint
       Align = alTop
-      GroupIndex = 1
       Caption = '&Log'
       Flat = True
       Glyph.Data = {
@@ -416,23 +417,22 @@ object FormUserPerf: TFormUserPerf
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000ECE4DED0BBACD0BBAC
         B7A293B7A293E5E0DC0000000000000000000000000000000000000000000000
-        00000000000000000000}
+        00000000000000000000
+      }
+      GroupIndex = 1
       Layout = blGlyphTop
       OnClick = SpeedLogClick
       OnMouseEnter = SpeedUserMouseEnter
       OnMouseLeave = SpeedUserMouseLeave
-      ExplicitLeft = -4
-      ExplicitTop = 115
     end
     object SpeedUserLog: TSpeedButton
+      Cursor = crHandPoint
       Left = 1
+      Height = 60
       Top = 181
       Width = 98
-      Height = 60
-      Cursor = crHandPoint
       Align = alTop
-      GroupIndex = 1
-      Caption = 'Usu'#225'rios Logados'
+      Caption = 'Usuários Logados'
       Flat = True
       Glyph.Data = {
         66090000424D660900000000000036000000280000001C0000001C0000000100
@@ -510,20 +510,20 @@ object FormUserPerf: TFormUserPerf
         0000000000000000000000000000000000000000000000000000000000000000
         000000000000000000000000000000000084BDDE73ADCE73A5C6000000000000
         0000000000000000000000000000000000000000000000000000000000000000
-        00000000000000000000}
+        00000000000000000000
+      }
+      GroupIndex = 1
       Layout = blGlyphTop
       OnClick = SpeedUserLogClick
       OnMouseEnter = SpeedUserMouseEnter
       OnMouseLeave = SpeedUserMouseLeave
-      ExplicitLeft = -4
-      ExplicitTop = 301
     end
   end
   object Panel3: TPanel
     Left = 100
+    Height = 465
     Top = 41
     Width = 592
-    Height = 465
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 2

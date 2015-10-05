@@ -24,7 +24,7 @@ uses
   StdCtrls,
   SysUtils,
   UcBase,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType, LCLIntf,{$ENDIF}
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
   UserPermis_U;
 
 type
@@ -277,8 +277,7 @@ end;
 procedure TUCFrame_User.FDataSetCadastroUsuarioAfterScroll(DataSet: TDataSet);
 begin
   if (FUsercontrol.User.ProtectAdministrator) and
-    (DataSet.FieldByName('Login').AsString = FUsercontrol.Login.
-    InitialLogin.User) then
+    (DataSet.FieldByName('Login').AsString = FUsercontrol.Login.InitialLogin.User) then
   begin
     BtExclui.Enabled := False;
     BtPass.Enabled := False;

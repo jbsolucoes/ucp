@@ -1,1 +1,0 @@
-brc32 -foUCReg.dcr -r -t UCReg.rc

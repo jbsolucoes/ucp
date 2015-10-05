@@ -20,7 +20,7 @@ uses
   Messages,
   StdCtrls,
   SysUtils,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType, LCLIntf, {$ENDIF}
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
   ToolWin;
 
 type

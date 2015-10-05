@@ -41,7 +41,7 @@ uses
   {$ENDIF}
   UCMessages,
   UCSettings,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType, unix, {$ENDIF}
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
   Variants;
 
 const
@@ -52,7 +52,7 @@ const
 
   // Version
 const
-  UCVersion = '2.32 RC1';
+  UCVersion = 'Laz 2.33 RC1';
 
 type
   // Pensando em usar GUID para gerar a chave das tabelas !!!!
@@ -1115,7 +1115,6 @@ begin
 end;
 
 function TUserControl.GetLocalComputerName: String;
-{$IFDEF WINDOWS}
 var
   Count: DWORD;
   Buffer: String;
@@ -1128,14 +1127,8 @@ begin
     Buffer := '';
   Result := Buffer;
 end;
-{$ELSE IFDEF UNIX}
-begin
-  result := GetHostName;
-end;
-{$ENDIF}
 
 function TUserControl.GetLocalUserName: String;
-{$IFDEF WINDOWS}
 var
   Count: DWORD;
   Buffer: String;
@@ -1148,11 +1141,6 @@ begin
     Buffer := '';
   Result := Buffer;
 end;
-{$ELSE IFDEF UNIX}
-begin
-  result := GetEnvironmentVariable('USERNAME');
-end;
-{$ENDIF}
 
 procedure TUserControl.CriaFormTrocarSenha;
 begin
@@ -2223,8 +2211,10 @@ end;
 
 procedure TUserControl.TestaFecha(Sender: TObject; var CanClose: Boolean);
 begin
-  // if FFormLogin.ModalResult = mrOk then
-  CanClose := (CurrentUser.UserID > 0);
+  if FFormLogin.ModalResult = mrOk then
+    CanClose := (CurrentUser.UserID > 0)
+  else
+    CanClose := true;
 end;
 
 procedure TUserControl.ApplyRights;

@@ -1,83 +1,75 @@
 object UCFrame_UsersLogged: TUCFrame_UsersLogged
   Left = 0
+  Height = 240
   Top = 0
   Width = 578
-  Height = 240
-  Font.Charset = DEFAULT_CHARSET
+  Align = alClient
+  ClientHeight = 240
+  ClientWidth = 578
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
-  Font.Style = []
   ParentFont = False
   TabOrder = 0
   TabStop = True
   object DBGrid: TDBGrid
     Left = 0
+    Height = 192
     Top = 0
     Width = 578
-    Height = 192
     Align = alClient
-    DataSource = dsDados
-    Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-    ReadOnly = True
-    TabOrder = 0
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
-    TitleFont.Style = []
-    Columns = <
+    Color = clWindow
+    Columns = <    
       item
-        Expanded = False
-        FieldName = 'UserName'
         Title.Alignment = taCenter
         Title.Caption = 'Nome'
         Width = 159
-        Visible = True
-      end
+        FieldName = 'UserName'
+      end    
       item
-        Expanded = False
-        FieldName = 'Login'
         Title.Alignment = taCenter
+        Title.Caption = 'Login'
         Width = 123
-        Visible = True
-      end
+        FieldName = 'Login'
+      end    
       item
-        Expanded = False
-        FieldName = 'MACHINENAME'
         Title.Alignment = taCenter
         Title.Caption = 'Computador'
         Width = 150
-        Visible = True
-      end
+        FieldName = 'MACHINENAME'
+      end    
       item
-        Expanded = False
-        FieldName = 'DATA'
         Title.Alignment = taCenter
         Title.Caption = 'Data'
         Width = 130
-        Visible = True
+        FieldName = 'DATA'
       end>
+    DataSource = dsDados
+    FixedCols = 0
+    Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
   end
   object Panel3: TPanel
     Left = 0
+    Height = 48
     Top = 192
     Width = 578
-    Height = 48
     Align = alBottom
     BevelOuter = bvNone
+    ClientHeight = 48
+    ClientWidth = 578
     TabOrder = 1
-    DesignSize = (
-      578
-      48)
     object BtExit: TBitBtn
       Left = 470
+      Height = 25
       Top = 11
       Width = 95
-      Height = 25
       Anchors = [akTop, akRight]
       Caption = '&Fechar'
-      DoubleBuffered = True
       Glyph.Data = {
         B6020000424DB602000000000000B60100002800000010000000100000000100
         08000000000000010000120B0000120B0000600000006000000000000000FFFF
@@ -100,18 +92,17 @@ object UCFrame_UsersLogged: TUCFrame_UsersLogged
         403607484E4C4F3F4502020245242622212307474D4B4E3F4502020245292827
         254307474D4B4D3F4502020245302A2B292D07474D4B4D3F4502020245352E2C
         2E3207474D4B4D3F450202024545332F343107464A494A3F450202020202453C
-        3744074545454545450202020202020245450702020202020202}
-      ParentDoubleBuffered = False
+        3744074545454545450202020202020245450702020202020202
+      }
       TabOrder = 2
     end
     object BitMsg: TBitBtn
       Left = 270
+      Height = 25
       Top = 11
       Width = 95
-      Height = 25
       Anchors = [akTop, akRight]
       Caption = '&Mensagem'
-      DoubleBuffered = True
       Glyph.Data = {
         42020000424D4202000000000000420000002800000010000000100000000100
         1000030000000002000000000000000000000000000000000000007C0000E003
@@ -131,19 +122,18 @@ object UCFrame_UsersLogged: TUCFrame_UsersLogged
         1F7C1F7C1F7C1F7C1F7CD856DB7FDB7FDB7FDB7FB97F977F757F537F0D191F7C
         1F7C1F7C1F7C1F7C1F7C1F7CD852DB7FDB7FDB7FDB7FB97F977F0D191F7C1F7C
         1F7C1F7C1F7C1F7C1F7C1F7C1F7CD852D852D852D852D852D8521F7C1F7C1F7C
-        1F7C1F7C1F7C}
-      ParentDoubleBuffered = False
-      TabOrder = 0
+        1F7C1F7C1F7C
+      }
       OnClick = BitMsgClick
+      TabOrder = 0
     end
     object BitRefresh: TBitBtn
       Left = 369
+      Height = 25
       Top = 11
       Width = 95
-      Height = 25
       Anchors = [akTop, akRight]
       Caption = '&Atualizar'
-      DoubleBuffered = True
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000010000FF00FF000029
@@ -186,14 +176,14 @@ object UCFrame_UsersLogged: TUCFrame_UsersLogged
         425252371B1B1B0F0600001C41303F52525252524D1C1B110800001C44322E38
         4E52524B2A1F1F1B0A00001C48392F2E465235271F21211B0B00001C49463F3C
         37312E2A2721271F0C00001C3F494948443C312C2727212110000000242B2B2B
-        2A271F1F1F1C1C15000000000000000000000000000000000000}
-      ParentDoubleBuffered = False
-      TabOrder = 1
+        2A271F1F1F1C1C15000000000000000000000000000000000000
+      }
       OnClick = BitRefreshClick
+      TabOrder = 1
     end
   end
   object dsDados: TDataSource
-    Left = 132
-    Top = 144
+    left = 132
+    top = 144
   end
 end

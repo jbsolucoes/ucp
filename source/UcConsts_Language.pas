@@ -15,7 +15,7 @@ Const
   MaxArray = 227;
 
 Const
-  UC_PTBR: Array [0 .. MaxArray, 0 .. 1] of string = (('Const_Contr_TitleLabel',
+  UC_PTBR: Array [0 .. MaxArray, 0 .. 1] of utf8string = (('Const_Contr_TitleLabel',
     'Seleção de Componentes do Form. :'), ('Const_Contr_GroupLabel', 'Grupo :'),
     ('Const_Contr_CompDispLabel', 'Componentes Disponíveis :'),
     ('Const_Contr_CompSelLabel', 'Componentes Selecionados :'),
@@ -818,7 +818,7 @@ Begin
     Case Lingua of
       ucPortuguesBr:
         If UpperCase(UC_PTBR[I, 0]) = UpperCase(Prop) then
-          Result := UC_PTBR[I, 1];
+          Result := UTF8Encode(UC_PTBR[I, 1]);
       ucEnglish:
         If UpperCase(UC_ENGLISH[I, 0]) = UpperCase(Prop) then
           Result := UC_ENGLISH[I, 1];

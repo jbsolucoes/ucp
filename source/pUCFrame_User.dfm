@@ -1,27 +1,31 @@
 object UCFrame_User: TUCFrame_User
   Left = 0
+  Height = 311
   Top = 0
   Width = 594
-  Height = 311
+  Align = alClient
   AutoSize = True
+  ClientHeight = 311
+  ClientWidth = 594
   TabOrder = 0
   TabStop = True
   object Panel3: TPanel
     Left = 0
+    Height = 45
     Top = 266
     Width = 594
-    Height = 45
     Align = alBottom
     BevelOuter = bvNone
+    ClientHeight = 45
+    ClientWidth = 594
     TabOrder = 0
     object btAdic: TBitBtn
+      Cursor = crHandPoint
       Left = 39
+      Height = 25
       Top = 10
       Width = 81
-      Height = 25
-      Cursor = crHandPoint
       Caption = '&Adicionar'
-      DoubleBuffered = True
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
         18000000000000060000120B0000120B00000000000000000000FF00FFFF00FF
@@ -72,20 +76,19 @@ object UCFrame_User: TUCFrame_User
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
         FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
         FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
-        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
+        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      }
       NumGlyphs = 2
-      ParentDoubleBuffered = False
-      TabOrder = 0
       OnClick = btAdicClick
+      TabOrder = 0
     end
     object BtAlt: TBitBtn
+      Cursor = crHandPoint
       Left = 126
+      Height = 25
       Top = 10
       Width = 81
-      Height = 25
-      Cursor = crHandPoint
       Caption = '&Alterar'
-      DoubleBuffered = True
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
         18000000000000060000120B0000120B00000000000000000000FF00FFFF00FF
@@ -136,20 +139,19 @@ object UCFrame_User: TUCFrame_User
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
         FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
         FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
-        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
+        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      }
       NumGlyphs = 2
-      ParentDoubleBuffered = False
-      TabOrder = 1
       OnClick = BtAltClick
+      TabOrder = 1
     end
     object BtExclui: TBitBtn
+      Cursor = crHandPoint
       Left = 213
+      Height = 25
       Top = 10
       Width = 81
-      Height = 25
-      Cursor = crHandPoint
       Caption = '&Excluir'
-      DoubleBuffered = True
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
         18000000000000060000120B0000120B00000000000000000000FF00FFFF00FF
@@ -200,20 +202,19 @@ object UCFrame_User: TUCFrame_User
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
         FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
         FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
-        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
+        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      }
       NumGlyphs = 2
-      ParentDoubleBuffered = False
-      TabOrder = 2
       OnClick = BtExcluiClick
+      TabOrder = 2
     end
     object BtAcess: TBitBtn
+      Cursor = crHandPoint
       Left = 300
+      Height = 25
       Top = 10
       Width = 81
-      Height = 25
-      Cursor = crHandPoint
       Caption = '&Acessos'
-      DoubleBuffered = True
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
         18000000000000060000120B0000120B00000000000000000000FF00FFFF00FF
@@ -264,20 +265,19 @@ object UCFrame_User: TUCFrame_User
         8989FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
         FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
         FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
-        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
+        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      }
       NumGlyphs = 2
-      ParentDoubleBuffered = False
-      TabOrder = 3
       OnClick = BtAcessClick
+      TabOrder = 3
     end
     object BtnClose: TBitBtn
+      Cursor = crHandPoint
       Left = 474
+      Height = 25
       Top = 10
       Width = 81
-      Height = 25
-      Cursor = crHandPoint
       Caption = '&Fechar'
-      DoubleBuffered = True
       Glyph.Data = {
         B6020000424DB602000000000000B60100002800000010000000100000000100
         08000000000000010000120B0000120B0000600000006000000000000000FFFF
@@ -300,18 +300,17 @@ object UCFrame_User: TUCFrame_User
         403607484E4C4F3F4502020245242622212307474D4B4E3F4502020245292827
         254307474D4B4D3F4502020245302A2B292D07474D4B4D3F4502020245352E2C
         2E3207474D4B4D3F450202024545332F343107464A494A3F450202020202453C
-        3744074545454545450202020202020245450702020202020202}
-      ParentDoubleBuffered = False
+        3744074545454545450202020202020245450702020202020202
+      }
       TabOrder = 4
     end
     object BtPass: TBitBtn
+      Cursor = crHandPoint
       Left = 387
+      Height = 25
       Top = 10
       Width = 81
-      Height = 25
-      Cursor = crHandPoint
       Caption = '&Senha'
-      DoubleBuffered = True
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
         18000000000000060000120B0000120B00000000000000000000C8D0D4C8D0D4
@@ -362,62 +361,57 @@ object UCFrame_User: TUCFrame_User
         B3B3A5A6A6B2B8BBC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4
         C8D0D4C8D0D4A4C2D576B2D761A0C86C9CBBA6B8C2C8D0D4C8D0D4C8D0D4C8D0
         D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8CDCFC8C9CABDBEBEB4
-        B6B7BBC1C4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4}
+        B6B7BBC1C4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4
+      }
       NumGlyphs = 2
-      ParentDoubleBuffered = False
-      TabOrder = 5
       OnClick = BtPassClick
+      TabOrder = 5
     end
   end
   object DbGridUser: TDBGrid
     Left = 0
+    Height = 266
     Top = 0
     Width = 594
-    Height = 266
     Align = alClient
-    Ctl3D = True
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'Nome'
+        Width = 239
+        FieldName = 'Nome'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'Login'
+        Width = 123
+        FieldName = 'Login'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'Email'
+        Width = 199
+        FieldName = 'Email'
+      end>
     DataSource = DataUser
+    FixedCols = 0
     Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
-    ParentCtl3D = False
     ReadOnly = True
     TabOrder = 1
-    TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
     OnDblClick = BtAltClick
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'Nome'
-        Title.Alignment = taCenter
-        Width = 239
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Login'
-        Title.Alignment = taCenter
-        Width = 123
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Email'
-        Title.Alignment = taCenter
-        Width = 199
-        Visible = True
-      end>
   end
   object DataUser: TDataSource
     AutoEdit = False
-    Left = 296
-    Top = 152
+    left = 296
+    top = 152
   end
   object DataPerfil: TDataSource
     AutoEdit = False
-    Left = 328
-    Top = 152
+    left = 328
+    top = 152
   end
 end

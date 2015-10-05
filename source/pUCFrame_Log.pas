@@ -22,14 +22,17 @@ uses
   ImgList,
   Messages,
   StdCtrls,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType, LCLIntf, {$ENDIF}
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
   SysUtils,
   {$IFDEF FPC}
-  EditBtn,
+  EditBtn, DateTimePicker,
   {$ENDIF}
   UCBase;
 
 type
+
+  { TUCFrame_Log }
+
   TUCFrame_Log = class(TFrame)
     DataSource1: TDataSource;
     ImageList1: TImageList;
@@ -43,13 +46,13 @@ type
     btfecha: TBitBtn;
     btexclui: TBitBtn;
     ComboUsuario: TComboBox;
-    {$IFNDEF FPC}
+//    {$IFNDEF FPC}
     Data1: TDateTimePicker;
     Data2: TDateTimePicker;
-    {$ELSE}
-    Data1: TDateEdit;
-    Data2: TDateEdit;
-    {$ENDIF}
+//    {$ELSE}
+//    Data1: TDateEdit;
+//    Data2: TDateEdit;
+//    {$ENDIF}
     ComboNivel: TComboBox;
     procedure ComboNivelDrawItem(Control: TWinControl; Index: Integer;
       Rect: TRect; State: TOwnerDrawState);

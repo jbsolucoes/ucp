@@ -17,7 +17,7 @@ uses
   ComponentEditors,
   {$ENDIF}
   TypInfo,
-  UCBase;
+  UCBase, LResources;
 
 type
   TUCComponentsVarProperty = class(TStringProperty)
@@ -70,7 +70,7 @@ uses
   UCIdle,
   UCObjSel_U,
   UCEditorForm_U,
-  UCMail,
+  UcMail,
   UCSettings;
 
 procedure Register;
@@ -380,5 +380,8 @@ function TUserControlEditor.GetVerbCount: Integer;
 begin
   Result := 1;
 end;
+
+initialization
+  {$I usercontrol.lrs}
 
 end.

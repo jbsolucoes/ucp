@@ -1,0 +1,1 @@
+c:\lazarus\tools\lazres ..\lazarus\usercontrol.lrs TUserControl.bmp TUCControls.bmp TUCIdle.bmp TMailUserControl.bmp TUCSettings.bmp TUCApplicationMessage.bmp

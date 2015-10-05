@@ -1,18 +1,20 @@
 object Form1: TForm1
   Left = 255
-  Height = 240
+  Height = 292
   Top = 194
-  Width = 320
+  Width = 465
   Caption = 'Form1'
   Menu = MainMenu1
   OnCreate = FormCreate
-  LCLVersion = '1.4.0.4'
+  LCLVersion = '1.4.2.0'
   object UserControl1: TUserControl
     ApplicationID = 'ProjetoNovo'
     ControlRight.MainMenu = MainMenu1
     User.MenuItem = MenuItem2
     UserPasswordChange.MenuItem = MenuItem3
+    UsersLogged.Active = False
     UsersLogoff.MenuItem = MenuItem4
+    LogControl.Active = False
     LogControl.TableLog = 'UCLog'
     Language = ucPortuguesBr
     EncryptKey = 0
@@ -41,44 +43,35 @@ object Form1: TForm1
     TableRights.FieldFormName = 'UCFormName'
     TableRights.FieldKey = 'UCKey'
     TableRights.TableName = 'UCTabRights'
+    TableUsersLogged.FieldLogonID = 'UCIdLogon'
+    TableUsersLogged.FieldUserID = 'UCIdUser'
+    TableUsersLogged.FieldApplicationID = 'UCApplicationId'
+    TableUsersLogged.FieldMachineName = 'UCMachineName'
+    TableUsersLogged.FieldData = 'UCData'
+    TableUsersLogged.TableName = 'UCTabUsersLogged'
     DataConnector = UCSQLdbConn1
     left = 31
     top = 43
   end
   object UCSQLdbConn1: TUCSQLdbConn
-    Connection = IBConnection1
-    left = 126
-    top = 46
-  end
-  object IBConnection1: TIBConnection
-    Connected = False
-    LoginPrompt = False
-    DatabaseName = 'C:\seuarquivo.fdb'
-    KeepConnection = False
-    Password = 'masterkey'
-    Transaction = SQLTransaction1
-    UserName = 'SYSDBA'
-    LogEvents = []
-    left = 211
-    top = 47
+    Connection = SQLite3Connection1
+    left = 144
+    top = 48
   end
   object SQLTransaction1: TSQLTransaction
     Active = False
     Action = caCommit
-    Database = IBConnection1
-    left = 209
-    top = 101
+    Database = SQLite3Connection1
+    left = 256
+    top = 104
   end
   object MainMenu1: TMainMenu
-    left = 43
-    top = 159
+    left = 48
+    top = 184
     object MenuItem1: TMenuItem
       Caption = 'Sistema'
-      object MenuItem5: TMenuItem
-        Caption = 'Controle de acesso'
-      end
       object MenuItem2: TMenuItem
-        Caption = 'Usuarios'
+        Caption = 'Controle de Usuários'
       end
       object MenuItem3: TMenuItem
         Caption = 'Mudar senha'
@@ -141,7 +134,7 @@ object Form1: TForm1
     CommonMessages.BlankPassword = 'Retirada senha do Login %s'
     CommonMessages.UsuarioExiste = 'O Usuário "%s" já está cadastrado no sistema !!'
     CommonMessages.PasswordExpired = 'Atenção, sua senha expirou, favor troca-la'
-    CommonMessages.ForcaTrocaSenha = 'MudanÃƒÆ’Ã‚Â§a de senha obrigatÃƒÆ’Ã‚Â³ria'
+    CommonMessages.ForcaTrocaSenha = 'MudanÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§a de senha obrigatÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³ria'
     Login.WindowCaption = 'Login'
     Login.LabelUser = 'Usuário :'
     Login.LabelPassword = 'Senha :'
@@ -324,7 +317,18 @@ object Form1: TForm1
     UsersLogged.InputCaption = 'Mensagem'
     UsersLogged.InputText = 'Digite sua mensagem'
     UsersLogged.MsgSystem = 'Mensagem do sistema'
-    left = 30
-    top = 85
+    left = 32
+    top = 104
+  end
+  object SQLite3Connection1: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'C:\projetos\ucp\demos\db\demo.db'
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    LogEvents = []
+    Options = []
+    left = 256
+    top = 43
   end
 end

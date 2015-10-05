@@ -1,55 +1,57 @@
 object frmLoginWindow: TfrmLoginWindow
   Left = 343
+  Height = 171
   Top = 286
+  Width = 350
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Login'
   ClientHeight = 171
   ClientWidth = 350
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
-  Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
-  Position = poMainFormCenter
   OnClose = FormClose
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
-  TextHeight = 13
+  Position = poMainFormCenter
+  LCLVersion = '1.4.2.0'
   object PTop: TPanel
     Left = 0
+    Height = 17
     Top = 0
     Width = 350
-    Height = 17
     Align = alTop
     BevelOuter = bvNone
+    ClientHeight = 17
+    ClientWidth = 350
     TabOrder = 0
     object ImgTop: TImage
       Left = 0
+      Height = 0
       Top = 0
       Width = 0
-      Height = 0
       AutoSize = True
       Center = True
     end
   end
   object PLeft: TPanel
     Left = 0
+    Height = 120
     Top = 17
     Width = 10
-    Height = 124
     Align = alLeft
     BevelOuter = bvNone
+    ClientHeight = 120
+    ClientWidth = 10
     TabOrder = 1
     object imgLeft: TImage
       Left = 0
+      Height = 0
       Top = 0
       Width = 0
-      Height = 0
       AutoSize = True
       Center = True
       Transparent = True
@@ -57,98 +59,102 @@ object frmLoginWindow: TfrmLoginWindow
   end
   object PBottom: TPanel
     Left = 0
-    Top = 141
-    Width = 350
     Height = 11
+    Top = 137
+    Width = 350
     Align = alBottom
     BevelOuter = bvNone
+    ClientHeight = 11
+    ClientWidth = 350
     TabOrder = 2
     object ImgBottom: TImage
       Left = 0
+      Height = 0
       Top = 0
       Width = 0
-      Height = 0
       AutoSize = True
       Center = True
     end
   end
   object Panel1: TPanel
     Left = 10
+    Height = 120
     Top = 17
     Width = 340
-    Height = 124
     Align = alClient
     BevelOuter = bvNone
+    ClientHeight = 120
+    ClientWidth = 340
     TabOrder = 3
     object PLogin: TPanel
       Left = 6
+      Height = 132
       Top = -3
       Width = 340
-      Height = 132
       BevelOuter = bvNone
+      ClientHeight = 132
+      ClientWidth = 340
       TabOrder = 0
       object LbUsuario: TLabel
         Left = 33
+        Height = 13
         Top = 10
         Width = 42
-        Height = 13
         Alignment = taRightJustify
-        Caption = 'Usu'#225'rio :'
+        Caption = 'Usuário :'
+        ParentColor = False
       end
       object LbSenha: TLabel
         Left = 38
+        Height = 13
         Top = 42
         Width = 37
-        Height = 13
         Alignment = taRightJustify
         Caption = 'Senha :'
+        ParentColor = False
       end
       object lbEsqueci: TLabel
+        Cursor = crHandPoint
         Left = 87
+        Height = 13
         Top = 70
         Width = 79
-        Height = 13
-        Cursor = crHandPoint
         Caption = 'Esqueci a senha'
         Enabled = False
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsUnderline]
+        ParentColor = False
         ParentFont = False
         Visible = False
       end
       object EditUsuario: TEdit
         Left = 82
+        Height = 21
         Top = 7
         Width = 225
-        Height = 21
-        CharCase = ecUpperCase
-        Ctl3D = True
+        CharCase = ecUppercase
         MaxLength = 15
-        ParentCtl3D = False
-        TabOrder = 0
         OnChange = EditUsuarioChange
+        TabOrder = 0
       end
       object EditSenha: TEdit
         Left = 82
+        Height = 21
         Top = 39
         Width = 225
-        Height = 21
-        Ctl3D = True
+        EchoMode = emPassword
         MaxLength = 10
-        ParentCtl3D = False
         PasswordChar = '*'
         TabOrder = 1
       end
       object btOK: TBitBtn
         Left = 63
+        Height = 25
         Top = 95
         Width = 100
-        Height = 25
         Caption = 'OK'
-        DoubleBuffered = True
         Glyph.Data = {
           36040000424D3604000000000000360000002800000010000000100000000100
           2000000000000004000000000000000000000000000000000000C8D0D400C8D0
@@ -183,18 +189,17 @@ object frmLoginWindow: TfrmLoginWindow
           D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0
           D400C8D0D400C8D0D400C8D0D400C6CACD00BB9A8A00B99A8B00C8D0D400C8D0
           D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0
-          D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400}
-        ParentDoubleBuffered = False
+          D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400
+        }
         TabOrder = 2
       end
       object BtCancela: TBitBtn
         Left = 177
+        Height = 25
         Top = 95
         Width = 100
-        Height = 25
         Cancel = True
         Caption = 'Cancelar'
-        DoubleBuffered = True
         Glyph.Data = {
           36040000424D3604000000000000360000002800000010000000100000000100
           2000000000000004000000000000000000000000000000000000C8D0D400ACB3
@@ -229,33 +234,33 @@ object frmLoginWindow: TfrmLoginWindow
           CF00707DCF006F7ACC00C7CFD300C8D0D400C8D0D400C8D0D400C8D0D400C8D0
           D400C8D0D400C8D0D400949CC900424DBE009097C500C8D0D400C8D0D400C8D0
           D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0
-          D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400}
-        ParentDoubleBuffered = False
-        TabOrder = 3
+          D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400C8D0D400
+        }
         OnClick = BtCancelaClick
+        TabOrder = 3
       end
     end
   end
   object StatusBar: TStatusBar
     Left = 0
-    Top = 152
+    Height = 23
+    Top = 148
     Width = 350
-    Height = 19
-    Panels = <
+    Panels = <    
       item
         Alignment = taRightJustify
         Text = 'Tentativa: '
         Width = 60
-      end
+      end    
       item
         Alignment = taCenter
         Width = 80
-      end
+      end    
       item
         Alignment = taRightJustify
         Text = 'Limite de Tentativas: '
         Width = 130
-      end
+      end    
       item
         Alignment = taCenter
         Width = 50

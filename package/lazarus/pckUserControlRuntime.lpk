@@ -29,7 +29,7 @@
         </Verbosity>
       </Other>
     </CompilerOptions>
-    <Version Major="2" Minor="32"/>
+    <Version Major="2" Minor="33"/>
     <Files Count="23">
       <Item1>
         <Filename Value="..\..\source\TrocaSenha_U.pas"/>
@@ -124,15 +124,18 @@
         <Type Value="Include"/>
       </Item23>
     </Files>
-    <RequiredPkgs Count="2">
+    <RequiredPkgs Count="3">
       <Item1>
-        <PackageName Value="pckUCDataConnector"/>
-        <MinVersion Major="2" Minor="32" Valid="True"/>
+        <PackageName Value="DateTimeCtrls"/>
       </Item1>
       <Item2>
+        <PackageName Value="pckUCDataConnector"/>
+        <MinVersion Major="2" Minor="32" Valid="True"/>
+      </Item2>
+      <Item3>
         <PackageName Value="LCL"/>
         <MinVersion Major="1" Valid="True"/>
-      </Item2>
+      </Item3>
     </RequiredPkgs>
     <UsageOptions>
       <UnitPath Value="$(PkgOutDir)"/>
