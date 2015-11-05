@@ -2,7 +2,7 @@
 
 UserControl ported to Lazarus.
 
-Last test on Lazarus 1.4.2 FPC 2.6.4 SVN Revision 49524.
+Last test on Lazarus 1.4.4 FPC 2.6.4 SVN Revision 49931.
 
 ###Install
 ```
@@ -21,6 +21,6 @@ Best regards,
 
 JB
 ```
-sac@jbsolucoes.net 
+sac@jbsolucoes.net
 josebenedito@gmail.com
 ```
