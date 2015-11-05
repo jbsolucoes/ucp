@@ -1,0 +1,62 @@
+object fLogin: TfLogin
+  Left = 366
+  Height = 196
+  Top = 202
+  Width = 320
+  BorderStyle = bsToolWindow
+  Caption = 'Login'
+  ClientHeight = 196
+  ClientWidth = 320
+  Position = poMainFormCenter
+  LCLVersion = '1.4.4.0'
+  object edUser: TEdit
+    Left = 82
+    Height = 23
+    Top = 57
+    Width = 110
+    TabOrder = 0
+  end
+  object edPass: TEdit
+    Left = 81
+    Height = 23
+    Top = 98
+    Width = 111
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 17
+    Height = 15
+    Top = 57
+    Width = 23
+    Caption = 'User'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 18
+    Height = 15
+    Top = 103
+    Width = 23
+    Caption = 'Pass'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 224
+    Height = 25
+    Top = 57
+    Width = 75
+    Caption = 'OK'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 224
+    Height = 25
+    Top = 98
+    Width = 75
+    Caption = 'Cancel'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+end
