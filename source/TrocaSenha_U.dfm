@@ -1,51 +1,53 @@
 object TrocaSenha: TTrocaSenha
   Left = 398
+  Height = 163
   Top = 263
+  Width = 353
   ActiveControl = EditAtu
   BorderStyle = bsDialog
-  Caption = 'Seguran'#231'a'
+  Caption = 'Segurança'
   ClientHeight = 163
   ClientWidth = 353
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
-  Font.Style = []
-  OldCreateOrder = False
-  Position = poMainFormCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
-  PixelsPerInch = 96
-  TextHeight = 13
+  Position = poMainFormCenter
+  LCLVersion = '1.4.4.0'
   object Panel1: TPanel
     Left = 0
+    Height = 35
     Top = 0
     Width = 353
-    Height = 35
     Align = alTop
     BevelOuter = bvNone
+    ClientHeight = 35
+    ClientWidth = 353
     Color = clWhite
+    ParentColor = False
     TabOrder = 0
     object lbDescricao: TLabel
       Left = 47
+      Height = 18
       Top = 11
       Width = 124
-      Height = 18
       Caption = 'Trocar Senha '
-      Font.Charset = ANSI_CHARSET
+      Font.CharSet = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
       Font.Name = 'Verdana'
       Font.Style = [fsBold]
+      ParentColor = False
       ParentFont = False
     end
     object Image1: TImage
       Left = 8
+      Height = 28
       Top = 4
       Width = 28
-      Height = 28
       AutoSize = True
       Picture.Data = {
         07544269746D6170760C0000424D760C00000000000036000000280000001C00
@@ -148,24 +150,26 @@ object TrocaSenha: TTrocaSenha
         FF00FFFFFF00FFFFFF00FFFFFF00F4F7FA00B2D0E30085B8D80070A9CE0071A6
         C70087AFC900C3D1DB00FAFAFA00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-        FF00}
+        FF00
+      }
     end
   end
   object Panel3: TPanel
     Left = 256
+    Height = 128
     Top = 35
     Width = 97
-    Height = 128
     Align = alRight
     BevelOuter = bvNone
+    ClientHeight = 128
+    ClientWidth = 97
     TabOrder = 1
     object btGrava: TBitBtn
       Left = 8
+      Height = 25
       Top = 32
       Width = 81
-      Height = 25
       Caption = '&Gravar'
-      DoubleBuffered = True
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
         18000000000000060000120B0000120B00000000000000000000FF00FFFF00FF
@@ -216,18 +220,17 @@ object TrocaSenha: TTrocaSenha
         FFFFFFFFFFFFFFFFFBFBFBF5F5F5F1F1F18E8E8EABABAB696969FF00FFCE726F
         CE726FCE726FCE726FCE726FCE726FCE726FCE726FCE726FCE726FCE726FCE72
         6FCE726FCE726FCE726FFF00FF9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A
-        9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A}
+        9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A
+      }
       NumGlyphs = 2
-      ParentDoubleBuffered = False
       TabOrder = 0
     end
     object btCancel: TBitBtn
       Left = 8
+      Height = 25
       Top = 72
       Width = 81
-      Height = 25
       Caption = '&Cancelar'
-      DoubleBuffered = True
       Glyph.Data = {
         66030000424D6603000000000000660200002800000010000000100000000100
         08000000000000010000120B0000120B00008C0000008C00000000000000FFFF
@@ -256,75 +259,80 @@ object TrocaSenha: TTrocaSenha
         01363701606D4B8750454D190911161D28203164638855134845024D0B8B100F
         14212E44757D69577902024D0D08011218241F3253016140790202024D0A0C01
         0E1C2A390156787902020202024D4D1A1B2735334C797902020202020202024D
-        4D4D4D4D4D0202020202}
-      ParentDoubleBuffered = False
-      TabOrder = 1
+        4D4D4D4D4D0202020202
+      }
       OnClick = btCancelClick
+      TabOrder = 1
     end
   end
   object Panel2: TPanel
     Left = 0
+    Height = 128
     Top = 35
     Width = 256
-    Height = 128
     Align = alClient
     BevelInner = bvRaised
     BevelOuter = bvLowered
+    ClientHeight = 128
+    ClientWidth = 256
     TabOrder = 2
     object lbSenhaAtu: TLabel
-      Left = 34
-      Top = 27
-      Width = 64
+      Left = 8
       Height = 13
+      Top = 27
+      Width = 90
       Alignment = taRightJustify
+      AutoSize = False
       Caption = 'Senha Atual :'
+      ParentColor = False
     end
     object lbNovaSenha: TLabel
-      Left = 32
-      Top = 57
-      Width = 66
+      Left = 8
       Height = 13
+      Top = 57
+      Width = 90
       Alignment = taRightJustify
+      AutoSize = False
       Caption = 'Nova Senha :'
+      ParentColor = False
     end
     object lbConfirma: TLabel
-      Left = 51
-      Top = 88
-      Width = 47
+      Left = 8
       Height = 13
+      Top = 88
+      Width = 90
       Alignment = taRightJustify
+      AutoSize = False
       Caption = 'Confirma :'
+      ParentColor = False
     end
     object EditAtu: TEdit
       Left = 103
+      Height = 21
       Top = 24
       Width = 121
-      Height = 21
-      Ctl3D = True
+      EchoMode = emPassword
       MaxLength = 10
-      ParentCtl3D = False
       PasswordChar = '*'
       TabOrder = 0
     end
     object EditNova: TEdit
       Left = 103
+      Height = 21
       Top = 54
       Width = 121
-      Height = 21
-      Ctl3D = True
+      EchoMode = emPassword
       MaxLength = 10
-      ParentCtl3D = False
       PasswordChar = '*'
       TabOrder = 1
     end
     object EditConfirma: TEdit
       Left = 103
+      Height = 21
       Top = 85
       Width = 121
-      Height = 21
-      Ctl3D = True
+      EchoMode = emPassword
       MaxLength = 10
-      ParentCtl3D = False
       PasswordChar = '*'
       TabOrder = 2
     end
