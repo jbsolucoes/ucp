@@ -2792,13 +2792,19 @@ begin
     Mensagens.Text := StringReplace(Mensagens.Text, ':password',
       PasswordInicial, [rfReplaceAll]);
 
+    CustomForm := nil;
+
     if Assigned(OnCustomInitialMsg) then
       OnCustomInitialMsg(Self, CustomForm, Mensagens);
 
-    if CustomForm <> nil then
-      CustomForm.ShowModal
-    else
+    try
+      if CustomForm <> nil then
+        CustomForm.ShowModal
+      else
+        MessageDlg(Mensagens.Text, mtInformation, [mbOK], 0);
+    except
       MessageDlg(Mensagens.Text, mtInformation, [mbOK], 0);
+    end;
 
   finally
     FreeAndNil(Mensagens);
