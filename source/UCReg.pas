@@ -47,8 +47,8 @@ type
   end;
 
 procedure Register;
-{$IFNDEF FPC}
 procedure ShowControlsEditor(Componente: TUCControls);
+{$IFNDEF FPC}
 procedure ShowUserControlsEditor(Componente: TUserControl);
 {$ENDIF}
 
@@ -92,7 +92,7 @@ end;
 { TUCComponentsVarProperty }
 procedure TUCComponentsVarProperty.Edit;
 begin
-  {$IFNDEF FPC}ShowControlsEditor(TUCControls(GetComponent(0)));{$ENDIF}
+  ShowControlsEditor(TUCControls(GetComponent(0)));
 end;
 
 function TUCComponentsVarProperty.GetAttributes: TPropertyAttributes;
@@ -123,7 +123,7 @@ end;
 
 function TUCAboutVarProperty.GetValue: String;
 begin
-  Result := 'Versão ' + UCVersion;
+  Result := 'Version ' + UCVersion;
 end;
 
 {$IFNDEF FPC}
@@ -281,13 +281,14 @@ begin
     SysUtils.FreeAndNil(Formulario);
   end;
 end;
+{$ENDIF}
 
 procedure ShowControlsEditor(Componente: TUCControls);
 var
   FUCControl: TUCControls;
-  FEditor: IOTAEditor;
-  FModulo: IOTAModule;
-  FFormEditor: IOTAFormEditor;
+  FEditor: TComponentEditor;
+  FModulo: TForm;
+//  FFormEditor: IOTAFormEditor;
   I: Integer;
 begin
   FUCControl := Componente;
@@ -311,9 +312,8 @@ begin
     Free;
   end;
 
-  try
-    FModulo := (BorlandIDEServices as IOTAModuleServices)
-      .FindFormModule(FUCControl.UserControl.Owner.Name);
+{  try
+    FModulo := TForm(FUCControl.UserControl.Owner);
   except
     FModulo := Nil;
   end;
@@ -333,15 +333,15 @@ begin
         FFormEditor.MarkModified;
         Break;
       end;
-    end;
+    end;   }
 end;
-{$ENDIF}
+
 
 { TUCControlsEditor }
 
 procedure TUCControlsEditor.Edit;
 begin
-  {$IFNDEF FPC}ShowControlsEditor(TUCControls(Component));{$ENDIF}
+  ShowControlsEditor(TUCControls(Component));
 end;
 
 procedure TUCControlsEditor.ExecuteVerb(Index: Integer);

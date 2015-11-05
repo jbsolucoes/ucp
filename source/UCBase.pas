@@ -675,12 +675,13 @@ type
     procedure ApplyRights;
     procedure LockControls;
     procedure ListComponents(Form: String; List: TStringList);
+    property Components: TUCComponentsVar read FComponents write FComponents;
   published
     property AccessType: String read GetAccessType;
     property ActiveForm: String read GetActiveForm;
     property GroupName: String read FGroupName write SetGroupName;
     property UserControl: TUserControl read FUserControl write SetUserControl;
-    property Components: TUCComponentsVar read FComponents write FComponents;
+
     property NotAllowed: TUCNotAllowed read FNotAllowed write FNotAllowed
       default naInvisible;
   end;
