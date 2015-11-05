@@ -6,7 +6,7 @@ unit UCZEOSConnReg;
 
 interface
 
-uses Classes;
+uses Classes, LResources;
 
 procedure Register;
 
@@ -18,4 +18,8 @@ procedure Register;
 begin
   RegisterComponents('UC Connectors', [TUCZEOSConn]);
 end;
+
+initialization
+  {$I uczeosconn.lrs}
+
 end.
