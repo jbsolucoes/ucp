@@ -512,6 +512,9 @@ procedure TUserPermis.TreeMenuItem(marca: Boolean);
 var
   AbsIdx: Integer;
 begin
+  if TreeMenu.Selected = nil then
+    exit;
+
   if marca then
     if PTreeMenu(TreeMenu.Selected.Data).Selecionado < 2 then
     begin
@@ -570,8 +573,12 @@ end;
 
 procedure TUserPermis.TreeControlItem(marca: Boolean);
 begin
+  if TreeControls.Selected = nil then
+    exit;
+
   if PTreeControl(TreeControls.Selected.Data).Grupo then
     Exit;
+
   if marca then
   begin
     if PTreeControl(TreeControls.Selected.Data).Selecionado < 2 then
