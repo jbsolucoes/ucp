@@ -21,6 +21,5 @@ Best regards,
 
 JB
 ```
-sac@jbsolucoes.net
 josebenedito@gmail.com
 ```
