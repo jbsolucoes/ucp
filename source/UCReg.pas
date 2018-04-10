@@ -70,7 +70,7 @@ uses
   UCIdle,
   UCObjSel_U,
   UCEditorForm_U,
-  UcMail,
+  //UcMail,
   UCSettings;
 
 procedure Register;
@@ -80,8 +80,8 @@ begin
     TUCSettings,
     TUCControls,
     TUCApplicationMessage,
-    TUCIdle,
-    TMailUserControl
+    TUCIdle//,
+    //TMailUserControl
   ]);
   RegisterPropertyEditor(TypeInfo(TUCAboutVar), TUserControl, 'About', TUCAboutVarProperty);
   RegisterPropertyEditor(TypeInfo(TUCComponentsVar), TUserControl, 'Components', TUCComponentsVarProperty);

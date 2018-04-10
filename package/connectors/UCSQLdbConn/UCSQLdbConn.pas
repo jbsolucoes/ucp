@@ -7,7 +7,7 @@
  registered in UCSQLdbReg.pas
 -----------------------------------------------------------------------------}
 
-unit ucsqldbconn;
+unit UCSQLdbConn;
 
 {$IFDEF FPC}
   {$MODE Delphi}

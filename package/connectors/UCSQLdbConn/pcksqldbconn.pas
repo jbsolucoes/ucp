@@ -4,10 +4,11 @@
 
 unit pckSQLdbConn;
 
+{$warn 5023 off : no warning about unused units}
 interface
 
 uses
-  UCSQLdbConn, ucsqldbconnreg, LazarusPackageIntf;
+  ucsqldbconnreg, UCSQLdbConn, LazarusPackageIntf;
 
 implementation
 

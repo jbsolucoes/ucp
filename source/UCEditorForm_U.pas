@@ -175,10 +175,10 @@ implementation
 
 uses
   LoginWindow_U,
-  ShellAPI,
+
   SysUtils,
   UcConsts_Language,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  {$IFDEF WINDOWS}ShellAPI,  Windows,{$ELSE}LCLType,{$ENDIF}
   UCMessages;
 
 {$R *.dfm}

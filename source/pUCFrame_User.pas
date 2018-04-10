@@ -120,7 +120,7 @@ begin
   if FDataSetCadastroUsuario.IsEmpty then
     Exit;
   TempID := FDataSetCadastroUsuario.FieldByName('IDUser').AsInteger;
-  if MessageBox(Handle,
+  if Application.MessageBox(
     PChar(Format(FUsercontrol.UserSettings.UsersForm.PromptDelete,
     [FDataSetCadastroUsuario.FieldByName('Login').AsString])),
     PChar(FUsercontrol.UserSettings.UsersForm.PromptDelete_WindowCaption),

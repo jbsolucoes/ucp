@@ -12,7 +12,7 @@ procedure Register;
 
 implementation
 
-uses ucsqldbconn;
+uses UCSQLdbConn;
 
 procedure Register;
 begin

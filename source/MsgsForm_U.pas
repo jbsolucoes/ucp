@@ -209,7 +209,7 @@ begin
   if ListView1.Selected = nil then
   begin
     // Modfied by fduenas
-    MessageBox(Handle, PChar(TUCApplicationMessage(Owner)
+    Application.MessageBox( PChar(TUCApplicationMessage(Owner)
       .UserControl.UserSettings.AppMessages.MsgsForm_NoMessagesSelected),
       PChar(TUCApplicationMessage(Owner).UserControl.UserSettings.AppMessages.
       MsgsForm_NoMessagesSelected_WindowCaption), MB_ICONINFORMATION + MB_OK);
@@ -219,7 +219,7 @@ begin
   if ListView1.ItemIndex = -1 then
   begin
     // Modfied by fduenas
-    MessageBox(Handle, PChar(TUCApplicationMessage(Owner)
+    Application.MessageBox( PChar(TUCApplicationMessage(Owner)
       .UserControl.UserSettings.AppMessages.MsgsForm_NoMessagesSelected),
       PChar(TUCApplicationMessage(Owner).UserControl.UserSettings.AppMessages.
       MsgsForm_NoMessagesSelected_WindowCaption), MB_ICONINFORMATION or MB_OK);
@@ -259,7 +259,7 @@ begin
   if ListView1.Selected = nil then
   begin
     // Modfied by fduenas
-    MessageBox(Handle, PChar(TUCApplicationMessage(Owner)
+    Application.MessageBox( PChar(TUCApplicationMessage(Owner)
       .UserControl.UserSettings.AppMessages.MsgsForm_NoMessagesSelected),
       PChar(TUCApplicationMessage(Owner).UserControl.UserSettings.AppMessages.
       MsgsForm_NoMessagesSelected_WindowCaption), MB_ICONINFORMATION or MB_OK);
@@ -269,7 +269,7 @@ begin
   if ListView1.ItemIndex = -1 then
   begin
     // Modfied by fduenas
-    MessageBox(Handle, PChar(TUCApplicationMessage(Owner)
+    Application.MessageBox( PChar(TUCApplicationMessage(Owner)
       .UserControl.UserSettings.AppMessages.MsgsForm_NoMessagesSelected),
       PChar(TUCApplicationMessage(Owner).UserControl.UserSettings.AppMessages.
       MsgsForm_NoMessagesSelected_WindowCaption), MB_ICONINFORMATION or MB_OK);
@@ -304,7 +304,7 @@ begin
   if ListView1.Selected = nil then
   begin
     // Modfied by fduenas
-    MessageBox(Handle, PChar(TUCApplicationMessage(Owner)
+    Application.MessageBox( PChar(TUCApplicationMessage(Owner)
       .UserControl.UserSettings.AppMessages.MsgsForm_NoMessagesSelected),
       PChar(TUCApplicationMessage(Owner).UserControl.UserSettings.AppMessages.
       MsgsForm_NoMessagesSelected_WindowCaption), MB_ICONINFORMATION + MB_OK);
@@ -314,7 +314,7 @@ begin
   if ListView1.ItemIndex = -1 then
   begin
     // Modfied by fduenas
-    MessageBox(Handle, PChar(TUCApplicationMessage(Owner)
+    Application.MessageBox( PChar(TUCApplicationMessage(Owner)
       .UserControl.UserSettings.AppMessages.MsgsForm_NoMessagesSelected),
       PChar(TUCApplicationMessage(Owner).UserControl.UserSettings.AppMessages.
       MsgsForm_NoMessagesSelected_WindowCaption), MB_ICONINFORMATION or MB_OK);

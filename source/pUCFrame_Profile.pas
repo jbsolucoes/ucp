@@ -204,7 +204,7 @@ begin
     TempDS.Close;
     FreeAndNil(TempDS);
     // changed by fduenas: PromptDelete_WindowCaption
-    if MessageBox(handle,
+    if Application.MessageBox(
       PChar(Format(fUserControl.UserSettings.UsersProfile.PromptDelete,
       [FDataSetPerfilUsuario.FieldByName('Nome').AsString])),
       PChar(fUserControl.UserSettings.UsersProfile.PromptDelete_WindowCaption),

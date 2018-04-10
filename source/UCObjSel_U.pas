@@ -8,6 +8,9 @@ uses
 {$IFDEF DELPHI5_UP}
   Variants,
 {$ENDIF}
+{$IFDEF WINDOWS}
+  Windows,
+{$ENDIF}
   ActnList,
   Buttons,
   Classes,
@@ -23,8 +26,8 @@ uses
   StdCtrls,
   SysUtils,
   UCBase,
-  UcConsts_Language,
-  Windows;
+  UcConsts_Language
+  ;
 
 type
   TQControl = class(TControl)

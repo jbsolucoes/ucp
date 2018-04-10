@@ -22,21 +22,21 @@
     </CompilerOptions>
     <Files Count="4">
       <Item1>
-        <Filename Value="ucsqldbconn.pas"/>
-        <UnitName Value="ucsqldbconn"/>
-      </Item1>
-      <Item2>
         <Filename Value="ucsqldbconnreg.pas"/>
         <HasRegisterProc Value="True"/>
         <UnitName Value="ucsqldbconnreg"/>
-      </Item2>
-      <Item3>
+      </Item1>
+      <Item2>
         <Filename Value="ucsqldbconn.lrs"/>
         <Type Value="LRS"/>
-      </Item3>
-      <Item4>
+      </Item2>
+      <Item3>
         <Filename Value="..\..\..\source\UserControl.inc"/>
         <Type Value="Include"/>
+      </Item3>
+      <Item4>
+        <Filename Value="UCSQLdbConn.pas"/>
+        <UnitName Value="ucsqldbconn"/>
       </Item4>
     </Files>
     <RequiredPkgs Count="2">

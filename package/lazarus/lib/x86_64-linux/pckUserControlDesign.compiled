@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1502125217"/>
+  <Params Value=" -MDelphi -Scghi -Cg -O1 -gs -gl -l -vabq -Fi/home/jb/projetos/ucp/source -Fu/home/jb/projetos/ucp/source -Fu/usr/lib/lazarus/1.8.0/packager/units/x86_64-linux -Fu/usr/lib/lazarus/1.8.0/components/lazutils/lib/x86_64-linux -Fu/usr/lib/lazarus/1.8.0/lcl/units/x86_64-linux -Fu/usr/lib/lazarus/1.8.0/components/datetimectrls/lib/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/1.8.0/lcl/units/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/1.8.0/components/lazcontrols/lib/x86_64-linux/gtk2 -Fu/home/jb/projetos/ucp/package/lazarus/lib/x86_64-linux -Fu/usr/lib/lazarus/1.8.0/components/ideintf/units/x86_64-linux/gtk2 -Fu/home/jb/projetos/ucp/package/lazarus/ -FU/home/jb/projetos/ucp/package/lazarus/lib/x86_64-linux/ -dLCL -dLCLgtk2 pckUserControlDesign.pas"/>
+</CONFIG>

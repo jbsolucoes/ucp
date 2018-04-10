@@ -1120,6 +1120,7 @@ var
   Count: DWORD;
   Buffer: String;
 begin
+  {$IFDEF  WINDOWS}
   Count := MAX_COMPUTERNAME_LENGTH + 1;
   SetLength(Buffer, Count);
   if GetComputerName(PChar(Buffer), Count) then
@@ -1127,6 +1128,11 @@ begin
   else
     Buffer := '';
   Result := Buffer;
+  {$ELSE}
+  result := GetEnvironmentVariable('HOSTNAME');
+  {$ENDIF}
+
+
 end;
 
 function TUserControl.GetLocalUserName: String;
@@ -1134,6 +1140,7 @@ var
   Count: DWORD;
   Buffer: String;
 begin
+  {$IFDEF WINDOWS}
   Count := 254;
   SetLength(Buffer, Count);
   if GetUserName(PChar(Buffer), Count) then
@@ -1141,6 +1148,9 @@ begin
   else
     Buffer := '';
   Result := Buffer;
+  {$ELSE}
+  result := GetEnvironmentVariable('USER');
+  {$ENDIF}
 end;
 
 procedure TUserControl.CriaFormTrocarSenha;

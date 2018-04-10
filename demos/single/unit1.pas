@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, IBConnection, sqldb, sqlite3conn, FileUtil, UCBase,
-  UCSettings, ucsqldbconn, Forms, Controls, Graphics, Dialogs, Menus;
+  UCSettings, UCSQLdbConn, Forms, Controls, Graphics, Dialogs, Menus;
 
 type
 

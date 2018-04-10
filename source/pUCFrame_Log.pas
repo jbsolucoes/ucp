@@ -150,7 +150,7 @@ var
   FTabLog, Temp: String;
 begin
   // modified by fduenas
-  if MessageBox(Handle, PChar(FUsercontrol.UserSettings.Log.PromptDelete),
+  if Application.MessageBox( PChar(FUsercontrol.UserSettings.Log.PromptDelete),
     PChar(FUsercontrol.UserSettings.Log.PromptDelete_WindowCaption), mb_YesNo)
     <> mrYes then
     Exit;
