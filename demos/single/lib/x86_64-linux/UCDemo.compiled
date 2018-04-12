@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="/usr/bin/fpc" Date="1502125217"/>
-  <Params Value=" -MObjFPC -Scghi -Cg -O1 -g -gl -l -vewnhibq -Fi/home/jb/projetos/ucp/demos/single/lib/x86_64-linux -Fu/usr/lib/lazarus/1.8.0/components/sqldb/lib/x86_64-linux/gtk2 -Fu/home/jb/projetos/ucp/package/lazarus/lib/x86_64-linux -Fu/home/jb/projetos/ucp/package/connectors/UCSQLdbConn/lib/x86_64-linux -Fu/usr/lib/lazarus/1.8.0/components/ideintf/units/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/1.8.0/components/synedit/units/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/1.8.0/components/lazcontrols/lib/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/1.8.0/lcl/units/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/1.8.0/components/datetimectrls/lib/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/1.8.0/lcl/units/x86_64-linux -Fu/usr/lib/lazarus/1.8.0/components/codetools/units/x86_64-linux -Fu/usr/lib/lazarus/1.8.0/components/lazutils/lib/x86_64-linux -Fu/usr/lib/lazarus/1.8.0/packager/units/x86_64-linux -Fu/home/jb/projetos/ucp/demos/single/ -FU/home/jb/projetos/ucp/demos/single/lib/x86_64-linux/ -dLCL -dLCLgtk2 UCDemo.lpr"/>
-</CONFIG>
