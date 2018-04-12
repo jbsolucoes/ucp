@@ -2,7 +2,7 @@
 
 UserControl ported to Lazarus.
 
-Last test on Lazarus 1.4.4 FPC 2.6.4 SVN Revision 49931.
+Last test on Lazarus 1.8.0 FPC 3.0.4 SVN Revision 56594.
 
 ###Install
 ```
