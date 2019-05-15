@@ -1,4 +1,6 @@
 unit UcConsts_Language;
+ 
+ {$codepage UTF8} //Converte o código para UTF8 
 
 {$IFDEF FPC}
   {$MODE Delphi}
